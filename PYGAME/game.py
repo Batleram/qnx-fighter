@@ -21,7 +21,7 @@ class Game:
         pygame.init()
 
         # change the window caption
-        pygame.display.set_caption("Timeframe")
+        pygame.display.set_caption("Paint Fighter")
 
         # create window
         self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
@@ -115,7 +115,7 @@ class Game:
             self.display.fill((255, 255, 255))
             self.menu_ground.render(self.display, (0, 0))
 
-            self.title = Text('Timeframe', [750, 200])
+            self.title = Text('Paint Fighter', [750, 200])
             self.title.render(self.display, 120, (0,0,0))
 
             self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)), (850, 485))
