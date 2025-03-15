@@ -108,12 +108,13 @@ class Player(PhysicsEntity):
         super().__init__(game, 'player', pos, size)
         self.air_time = 0
         self.jumps = 1
+        self.dead = 1
 
-    def update(self, tilemap, movement=(0,0)):
+    def update(self, movement=(0,0)):
         '''
         updates players animations depending on movement
         '''
-        super().update(tilemap, movement=movement)
+        super().update(movement=movement)
 
         self.air_time += 1
 
