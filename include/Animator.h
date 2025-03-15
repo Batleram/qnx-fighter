@@ -7,7 +7,7 @@ class Animator {
         Animator();
         Texture2D LoadImage(std::string path);
         void LoadImages(std::string path, int numOfSprites);
-        void Draw(Vector2 position);
+        void Draw(Vector2 position, bool isFlipped);
         void Update();
         Texture2D GetFrame();
     private:

@@ -1,5 +1,6 @@
 #include "Animator.h"
 #include <vector>
+#include <string> 
 
 
 Animator::Animator() {
@@ -7,12 +8,13 @@ Animator::Animator() {
     Img_duration = 0;
     Done = false;
     Frame = 0;
-    vector<Texture2D> Images;
+    Images = std::vector<Texture2D>();
 }
 
 Texture2D Animator::LoadImage(std::string path) {
     // Load image from path
-    Texture2D Images = LoadTexture("resources/explosion.png");
+    Texture2D images = LoadTexture("resources/explosion.png");
+    return images;
 }
 
 void Animator::LoadImages(std::string path, int numOfSprites) {
@@ -23,9 +25,16 @@ void Animator::LoadImages(std::string path, int numOfSprites) {
     }
 }
 
-void Animator::Draw(Vector2 position) {
+void Animator::Draw(Vector2 position, bool isFlipped) {
     // Draw the current frame using the position (from player)
-    DrawTexture(Images[Frame], position.x, position.y, WHITE);
+    if (isFlipped) 
+    {
+        DrawTexture(Images[Frame], -position.x, position.y, WHITE);
+    }
+    else 
+    {
+        DrawTexture(Images[Frame], position.x, position.y, WHITE);
+    }
 }
 
 void Animator::Update() {
@@ -36,16 +45,16 @@ void Animator::Update() {
     }
     else 
     {
-        Frame = min(Frame + 1, Img_duration * Images.size() - 1);
+        Frame = fmin(Frame + 1, Img_duration * Images.size() - 1);
         if (Frame >= Img_duration * Images.size() - 1)
         {
             // This is for timed animations
-            Done = True; 
+            Done = true; 
         }     
     }
 }
 
 Texture2D Animator::GetFrame() {
     // Return the current frame
-    return images[frame];
+    return Images[Frame];
 }
