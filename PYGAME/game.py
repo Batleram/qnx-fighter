@@ -96,10 +96,10 @@ class Game:
 
 
         # initalizing player
-        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (70, 113))
+        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (100, 113))
         self.player.scale = 4
 
-        self.player2 = Player2(self, (self.display.get_width()/2, self.display.get_height()/2), (70, 113))
+        self.player2 = Player2(self, (self.display.get_width()/2, self.display.get_height()/2), (100, 113))
         self.player2.scale = 4
 
         self.background = Background(self.assets['background'], 1, display=self.display)

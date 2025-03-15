@@ -29,6 +29,8 @@ class PhysicsEntity:
         '''
         creates a rectangle at the entitiies current postion
         '''
+        # draw a rectangle around the entity
+        pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
         return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
     
     def set_action(self, action):
@@ -152,7 +154,7 @@ class Player(PhysicsEntity):
             self.set_action('attack')
             self.isAttacking = False
         elif self.crouch:
-            self.set_action('crouch')
+            self.set_action('kick')
             # restrict movement when crouching
             movement = (0, 0)
             self.isBlocking = False
@@ -167,6 +169,13 @@ class Player(PhysicsEntity):
         else:
             self.set_action('idle')
         player_movement = movement
+
+        # bound the character to within the screen
+        if self.pos[0] < 0:
+            self.pos[0] = 0
+        if self.pos[0] > (self.game.screen_size[0] - self.size[0]):
+            self.pos[0] = self.game.screen_size[0] - self.size[0]
+        
         super().update(tilemap, movement=player_movement)
         movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
         if movement_magnitude > 0:
@@ -236,7 +245,7 @@ class Player2(PhysicsEntity):
             self.set_action('attack')
             self.isAttacking = False
         elif self.crouch:
-            self.set_action('crouch')
+            self.set_action('kick')
             # restrict movement when crouching
             movement = (0, 0)
             self.isBlocking = False
