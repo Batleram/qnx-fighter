@@ -100,7 +100,7 @@ class Game:
 
 
         # initalizing player
-        self.player = Player(self, 'player', (self.display.get_width()/2, self.display.get_height()/2), (300, 113 * 3.80))
+        self.player = Player(self, 'player', (self.display.get_width()/2, self.display.get_height()/2), (300, 113 * 2.80))
         self.player.scale = 4
         self.player.flip = True
 

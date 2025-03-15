@@ -20,7 +20,7 @@ class PhysicsEntity:
         self.flip = False
 
         self.action = ''
-        self.anim_offset = (-20, -20) #renders with an offset to pad the animation against the hitbox
+        self.anim_offset = (-20, -190) #renders with an offset to pad the animation against the hitbox
         self.set_action('idle')
 
         self.last_movement = [0, 0]
@@ -32,18 +32,18 @@ class PhysicsEntity:
         # draw a rectangle around the entity
         if self.type == "player":
             if self.flip:
-                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1] - 100, self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0], self.pos[1] - 100, self.size[0], self.size[1])
             else:
-                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1] - 100, self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0], self.pos[1] -100, self.size[0], self.size[1])
         else:
             if self.flip:
-                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1] -100, self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0], self.pos[1] -100, self.size[0], self.size[1])
             else:
-                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1] - 100, self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0], self.pos[1] - 100, self.size[0], self.size[1])
     
     def set_action(self, action):
         '''
