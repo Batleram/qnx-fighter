@@ -198,10 +198,10 @@ class Player(PhysicsEntity):
         # bound the character to within the screen
         if self.pos[0] < 0:
             self.pos[0] = 0
-        if self.pos[0] > (self.game.screen_size[0] + self.size[0]):
-            self.pos[0] = self.game.screen_size[0] + self.size[0]
-        if self.pos[1] > (self.game.screen_size[1] - self.size[1]):
-            self.pos[1] = self.game.screen_size[1] - self.size[1]
+        if self.pos[0] > (self.game.screen_size[0]):
+            self.pos[0] = self.game.screen_size[0]
+        if self.pos[1] > (self.game.screen_size[1]):
+            self.pos[1] = self.game.screen_size[1]
             self.jumps = 1
         
         super().update(tilemap, movement=player_movement)
