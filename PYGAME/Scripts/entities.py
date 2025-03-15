@@ -13,7 +13,7 @@ class PhysicsEntity:
         self.type = e_type
         self.pos = list(pos) #make sure each entitiy has it's own list, (x,y)
         self.size = size
-        self.speed = 5
+        self.speed = 10
         self.velocity = [0,0,0, 0]
         self.collisions = {'up': False, 'down': False, 'left': False, 'right': False}
         self.scale = 0
