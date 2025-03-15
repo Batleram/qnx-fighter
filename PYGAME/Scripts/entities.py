@@ -20,7 +20,7 @@ class PhysicsEntity:
         self.flip = False
 
         self.action = ''
-        self.anim_offset = (-20, -190) #renders with an offset to pad the animation against the hitbox
+        self.anim_offset = (10, -190) #renders with an offset to pad the animation against the hitbox
         self.set_action('idle')
 
         self.last_movement = [0, 0]
@@ -122,7 +122,7 @@ class PhysicsEntity:
         '''
         renders entitiy asset
         '''
-        newSurf = pygame.transform.scale(self.animation.img(), (self.animation.img().get_width() * self.scale, self.animation.img().get_height() * self.scale)) # scale the image
+        newSurf = pygame.transform.scale(self.animation.img(), (self.animation.img().get_width() * self.scale, self.animation.img().get_height() * self.scale - 100)) # scale the image
         surf.blit(pygame.transform.flip(newSurf, self.flip, False), (self.pos[0] - offset[0] + self.anim_offset[0], self.pos[1] - offset[1] + self.anim_offset[1])) # fliping agasint horizontal axis
 
 class Player(PhysicsEntity):
