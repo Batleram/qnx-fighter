@@ -5,7 +5,7 @@ class Menu():
         ''' create the menu UI'''
         self.game = game
 
-        self.explain2 = Text('Good Luck and Have Fun!', [680, 660])
+        self.explain2 = Text('Good Luck and Have Fun!', [760, 660])
 
 
         # WASD
@@ -19,17 +19,20 @@ class Menu():
         self.D = Image(self.game.assets['D'].copy(), [555,305], 10, .5)
         self.D.scale(4)
 
-        self.Move = Text('Up - Jump \nDown - Block \nLeft\Right - Move', [450, 450])
+        self.Move = Text(' Up - Jump \n Down - Block \n Left\Right - Move', [430, 450])
 
-        self.ESC = Image(self.game.assets['ESC'].copy(), [1300,330], 10, .3)
-        self.ESC.scale(4)
 
-        self.Leave = Text('Exit', [1300, 450])
+        # A
+        self.click = Image(self.game.assets['2'].copy(), [890, 300], 10, .4)
+        self.click.scale(2)
 
-        self.click = Image(self.game.assets['click'].copy(), [940, 335], 10, .4)
-        self.click.scale(4)
+        self.Click = Text('Kick', [910, 450])
 
-        self.Click = Text('Shoot', [920, 450])
+        # B
+        self.ESC = Image(self.game.assets['1'].copy(), [1290,300], 10, .3)
+        self.ESC.scale(2)
+
+        self.Leave = Text('Attack', [1300, 450])
 
 
 
