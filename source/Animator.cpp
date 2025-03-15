@@ -1,6 +1,5 @@
 #include "Animator.h"
 #include <vector>
-#include <raylib.h>
 
 
 Animator::Animator() {

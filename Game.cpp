@@ -1,4 +1,3 @@
-#include <raylib.h>
 #include "Environment.h"
 
 int main() {
