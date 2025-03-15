@@ -16,6 +16,8 @@ class PhysicsEntity:
         self.speed = 5
         self.velocity = [0,0,0, 0]
         self.collisions = {'up': False, 'down': False, 'left': False, 'right': False}
+        self.scale = 0
+        self.flip = False
 
         self.action = ''
         self.anim_offset = (0, 0) #renders with an offset to pad the animation against the hitbox
@@ -79,11 +81,19 @@ class PhysicsEntity:
                     self.collisions['up'] = True
                 self.pos[1] = entity_rect.y
 
+        # find when to flip img for animation
+        if movement[0] > 0:
+            self.flip = False
+        if movement[0] < 0:
+            self.flip = True
 
         self.last_movement = movement # keeps track of movement
 
+        # gravity aka terminal falling velocity "VERTICLE"
+        self.velocity[1] = min(5, self.velocity[1] + 0.1) # (max velocity downwards, ) pos+ is downwards in pygame, from 5 to 0
 
-        if self.collisions['down'] or self.collisions['up']: # if object hit, stop velocity
+        if self.collisions['down'] or self.collisions['up'] or self.pos[1] > (self.game.screen_size[1] - 50): # if object hit, stop velocity
+            # - 50 for the floor
             self.velocity[1] = 0
 
         self.animation.update() # update animation
@@ -93,7 +103,8 @@ class PhysicsEntity:
         '''
         renders entitiy asset
         '''
-        surf.blit(pygame.transform.flip(self.animation.img(), False, False), (self.pos[0] - offset[0] + self.anim_offset[0], self.pos[1] - offset[1] + self.anim_offset[1])) # fliping agasint horizontal axis
+        newSurf = pygame.transform.scale(self.animation.img(), (self.animation.img().get_width() * self.scale, self.animation.img().get_height() * self.scale)) # scale the image
+        surf.blit(pygame.transform.flip(newSurf, self.flip, False), (self.pos[0] - offset[0] + self.anim_offset[0], self.pos[1] - offset[1] + self.anim_offset[1])) # fliping agasint horizontal axis
 
 class Player(PhysicsEntity):
     def __init__(self, game, pos, size):
@@ -102,21 +113,74 @@ class Player(PhysicsEntity):
         (game, position, size)
         '''
         super().__init__(game, 'player', pos, size)
-        self.air_time = 0
         self.jumps = 1
-        self.wall_slide = False
-        self.dashing = 0
+        self.crouch = False
+        self.timerAction = 0
+        self.isBlocking = False
+        self.isAttacking = False
+
+    def jump(self):
+        '''
+        player jump
+        '''
+        if self.jumps > 0:
+            self.velocity[1] = -5
+            self.jumps -= 1
+            self.set_action('jump')
+
+    def attack(self):
+        '''
+        player attack
+        '''
+        if self.isBlocking:
+            return
+        
+        self.isAttacking = True
+        self.timerAction = 25
+        
 
     def update(self, tilemap, movement=(0,0)):
         '''
         updates players animations depending on movement
         '''
+
+        if self.timerAction > 0:
+            self.timerAction -= 1
+            self.isAttacking = True
+
+        if self.isAttacking:
+            self.set_action('attack')
+            self.isAttacking = False
+        elif self.crouch:
+            self.set_action('crouch')
+            # restrict movement when crouching
+            movement = (0, 0)
+            self.isBlocking = False
+        elif self.jumps == 0:
+            self.set_action('jump')
+            self.isBlocking = False
+        elif self.isBlocking:
+            self.set_action('block')
+        elif movement[0] != 0: # if moving horizontally
+            self.set_action('run')
+            self.isBlocking = False
+        else:
+            self.set_action('idle')
         player_movement = movement
+        super().update(tilemap, movement=player_movement)
         movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
         if movement_magnitude > 0:
             player_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
-        
-        super().update(tilemap, movement=player_movement)
+
+
+        if self.pos[1] >= (self.game.screen_size[1] - 50):
+            self.jumps = 1
+
+        # normalize horizontal vel "HORIZONTAL"
+        if self.velocity[0] > 0:
+            self.velocity[0] = max(self.velocity[0] - 0.1, 0) # right falling to left
+        else:
+            self.velocity[0] = min(self.velocity[0] + 0.1, 0) # left falling to to right
 
 
     def render(self, surf, offset={0,0}):
