@@ -69,7 +69,7 @@ void Player::parry()
         return;
     }
     isParrying = true;
-    parryCoolDown = 5;
+    parryCoolDown = 50;
     
 }
 
@@ -80,7 +80,7 @@ void Player::attack()
         return;
     }
     isAttacking = true;
-    attackingCoolDown = 5;
+    attackingCoolDown = 50;
 }
 
 int Player::getMovement()
@@ -100,7 +100,7 @@ int Player::getMovement()
         case KEY_RIGHT:
             moveRight();
             break;
-        case ' ':
+        case 's':
             parry();
             break;
         case 'a':
@@ -123,13 +123,13 @@ void Player::display()
     else if (attackingCoolDown > 0)
     {
         wattron(curwin, COLOR_PAIR(1));
-        mvwaddch(curwin, yLoc, xLoc, 'X');
+        mvwaddch(curwin, yLoc, xLoc, 'A');
         wattroff(curwin, COLOR_PAIR(1));
     }
     else
     {
         wattron(curwin, COLOR_PAIR(3));
-        mvwaddch(curwin, yLoc, xLoc, 'X');
+        mvwaddch(curwin, yLoc, xLoc, 'P');
         wattroff(curwin, COLOR_PAIR(3));
     }
     wrefresh(curwin);
