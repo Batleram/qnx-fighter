@@ -111,7 +111,7 @@ class PhysicsEntity:
         # gravity aka terminal falling velocity "VERTICLE"
         self.velocity[1] = min(5, self.velocity[1] + 0.1) # (max velocity downwards, ) pos+ is downwards in pygame, from 5 to 0
 
-        if self.collisions['down'] or self.collisions['up'] or self.pos[1] > (self.game.screen_size[1] - 50): # if object hit, stop velocity
+        if self.collisions['down'] or self.collisions['up'] or self.pos[1] > (self.game.screen_size[1] - 10): # if object hit, stop velocity
             # - 50 for the floor
             self.velocity[1] = 0
 
