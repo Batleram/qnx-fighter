@@ -5,8 +5,7 @@ import random
 import pygame, os
 
 from scripts.utils import load_image, load_images, Animation
-from scripts.entities import Player, Enemy
-from scripts.bullet import Bullet
+from scripts.entities import Player
 from scripts.tilemap import Tilemap
 from scripts.UI import Text
 from scripts.menu import Menu
@@ -78,7 +77,6 @@ class Game:
         self.sfx['shoot'].set_volume(0.8)
         self.sfx['select'].set_volume(0.3)
         self.sfx['player_death'].set_volume(0.7)
-        self.sfx['enemy_death'].set_volume(0.8)
 
         #self.ost['introstart'].set_volume(0.6)
         self.ost['introloop'].set_volume(0.8)
@@ -243,11 +241,6 @@ class Game:
         self.slowdown = 0 # slow down the game
         self.game_speed = 1
 
-        #Enemy spawn wait (milliseconds)
-        self.enemy_timer_reset = 1600
-        self.enemy_timer = self.enemy_timer_reset
-
-        self.enemies = []
         self.bullets = []
         self.sparks = []
 
@@ -278,26 +271,6 @@ class Game:
             if self.has_moved and not self.dead:
                 self.game_timer -= self.deltatime * (1 + self.slowdown * (self.slowdown_timer_change -1))
 
-            
-            #Count down if has moved, if time elapsed spawn enemy
-            if self.has_moved:
-                self.enemy_timer -= self.deltatime * (1 - (self.slowdown * (self.slowdown_timer_change-1)/self.slowdown_timer_change))
-            if self.enemy_timer < 0:
-                enemy_pos = [100, 100]
-                if random.randint(0, 1) == 0:
-                    enemy_pos[0] = 0 + ((self.display.get_width() + 42) * random.randint(0, 1)) - 42
-                    enemy_pos[1] = random.randint(0, self.display.get_height() + 42) - 42
-                else:
-                    enemy_pos[1] = 0 + ((self.display.get_height() + 42) * random.randint(0, 1)) - 42
-                    enemy_pos[0] = random.randint(0, self.display.get_width() + 42) - 42
-                new_enemy = Enemy(self, enemy_pos, (42, 42))
-                self.enemies.append(new_enemy)
-                #next wait (milliseconds)
-                self.enemy_timer_reset -= 100
-                if self.enemy_timer_reset < 700:
-                    self.enemy_timer_reset = 700
-                self.enemy_timer = self.enemy_timer_reset
-
             render_scroll = (0, 0)
 
             self.ground.render(self.display, offset=render_scroll)
@@ -324,11 +297,6 @@ class Game:
             else:
                 self.game_speed = 1
             
-            #update enemies
-            for enemy in self.enemies:
-                enemy.update(self.tilemap, (self.player.pos[0] - enemy.pos[0], self.player.pos[1] - enemy.pos[1]))
-                enemy.render(self.display)
-
             if not self.dead:
                 # update player movement
                 self.player.update(self.tilemap, (self.movement[1] - self.movement[0], self.movement[3] - self.movement[2]))

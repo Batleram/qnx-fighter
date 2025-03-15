@@ -1,8 +1,6 @@
 import pygame
 import math
 
-from scripts.bullet import Bullet
-
 class PhysicsEntity:
     def __init__(self, game, e_type, pos, size):
         '''
@@ -187,39 +185,3 @@ class Player(PhysicsEntity):
         partly overriding rendering for dashing
         '''
         super().render(surf, offset=offset) # show player
-
-class Enemy(PhysicsEntity):
-    def __init__(self, game, pos, size):
-        '''
-        instantiates the enemies
-        (game, position: tuple, size)
-        '''
-        super().__init__(game, 'enemy', pos, size)
-        self.set_action('idle')
-        self.shoot_speed = 700
-        self.shoot_wait = self.shoot_speed
-    
-    def update(self, tilemap, movement=(0,0)):
-        self.shoot_wait -= self.game.deltatime * (1 - (self.game.slowdown * (self.game.slowdown_timer_change-1)/self.game.slowdown_timer_change))
-        if self.shoot_wait < 0:
-            dx = self.game.player.rect().centerx - self.rect().centerx
-            dy = self.game.player.rect().centery - self.rect().centery
-            bullet_angle = math.atan2(dx, -dy) - (math.pi/2)
-            new_bullet = Bullet(self.game, self.rect().center, 7, bullet_angle, size=(18, 18), type='enemy')
-            self.game.bullets.append(new_bullet)
-            self.shoot_wait = self.shoot_speed
-        enemy_movement = movement
-        movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
-        if movement_magnitude > 0:
-            enemy_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
-        enemy_movement = [enemy_movement[0] * 0.75, enemy_movement[1] * 0.75]
-
-        super().update(tilemap, movement=enemy_movement)
-        if self.rect().colliderect(self.game.player.rect()):
-            if not self.game.dead:
-                self.game.sfx['player_death'].play(0)
-            self.game.dead += 1
-            
-
-    def render(self, surf, offset=(0, 0)):
-        super().render(surf, offset=offset)
