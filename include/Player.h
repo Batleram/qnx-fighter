@@ -24,9 +24,11 @@ class Player {
         void HandleMovement(enum Movement movement);
         void HandleAbility(enum Ability ability);
         void TakeDamage(int damage);
+        int getHealth();
+        bool getJumping();
+        bool getCrouching();
+    private:
         int Health;
         bool isJumping; // vulnerable state
         bool isCrouching; // invulnerable state
-    private:
-
 };
