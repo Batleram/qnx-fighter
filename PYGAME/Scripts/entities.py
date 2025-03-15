@@ -20,7 +20,7 @@ class PhysicsEntity:
         self.flip = False
 
         self.action = ''
-        self.anim_offset = (0, 0) #renders with an offset to pad the animation against the hitbox
+        self.anim_offset = (-20, -20) #renders with an offset to pad the animation against the hitbox
         self.set_action('idle')
 
         self.last_movement = [0, 0]
@@ -35,11 +35,11 @@ class PhysicsEntity:
                 pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
                 return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
             else:
-                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0]-100, self.pos[1], self.size[0], self.size[1]), 2)
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
                 return pygame.Rect(self.pos[0]-100, self.pos[1], self.size[0], self.size[1])
         else:
             if self.flip:
-                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0]-100, self.pos[1], self.size[0], self.size[1]), 2)
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
                 return pygame.Rect(self.pos[0]-100, self.pos[1], self.size[0], self.size[1])
             else:
                 pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
@@ -164,7 +164,6 @@ class Player(PhysicsEntity):
         '''
         updates players animations depending on movement
         '''
-
         if self.timerAction > 0 and self.isAttacking:
             self.timerAction -= 1
             self.isAttacking = True
@@ -190,13 +189,7 @@ class Player(PhysicsEntity):
         player_movement = movement
 
         # bound the character to within the screen
-        if self.pos[0] < 0:
-            self.pos[0] = 0
-        if self.pos[0] > (self.game.display.get_width()):
-            self.pos[0] = self.game.display.get_width()
-        if self.pos[1] > (self.game.display.get_height()):
-            self.pos[1] = self.game.display.get_height()
-            self.jumps = 1
+
         
         super().update(tilemap, movement=player_movement)
         movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
