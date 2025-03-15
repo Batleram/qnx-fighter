@@ -8,6 +8,7 @@ class Player
         void moveLeft();
         void moveRight();
         void parry();
+        void attack();
         int getMovement();
         void display();
         void update();
@@ -15,6 +16,8 @@ class Player
         int Health;
         bool isParrying; // invulnerable state
         int parryCoolDown;
+        bool isAttacking;
+        int attackingCoolDown;
         //Time cooldown;
         int xLoc, yLoc, xMax, yMax;
         WINDOW * curwin;        

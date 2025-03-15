@@ -10,7 +10,8 @@ Player::Player(WINDOW * win, int y, int x)
     Health = 3;
     isParrying = false;
     parryCoolDown = 0;
-
+    isAttacking = false;
+    attackingCoolDown = 0;
 }
 
 void Player::moveUp()
@@ -63,9 +64,23 @@ void Player::moveRight()
 
 void Player::parry()
 {
+    if (parryCoolDown > 0 || attackingCoolDown > 0)
+    {
+        return;
+    }
     isParrying = true;
     parryCoolDown = 5;
     
+}
+
+void Player::attack()
+{
+    if (attackingCoolDown > 0 | parryCoolDown > 0)
+    {
+        return;
+    }
+    isAttacking = true;
+    attackingCoolDown = 5;
 }
 
 int Player::getMovement()
@@ -88,6 +103,9 @@ int Player::getMovement()
         case ' ':
             parry();
             break;
+        case 'a':
+            attack();
+            break;
         default:
             break;
     }
@@ -96,10 +114,24 @@ int Player::getMovement()
 
 void Player::display()
 {
-    // display player as a colored block
-    wattron(curwin, COLOR_PAIR(1));
-    mvwaddch(curwin, yLoc, xLoc, 'X');
-    wattroff(curwin, COLOR_PAIR(1));
+    if (parryCoolDown > 0)
+    {
+        wattron(curwin, COLOR_PAIR(2));
+        mvwaddch(curwin, yLoc, xLoc, 'X');
+        wattroff(curwin, COLOR_PAIR(2));
+    }
+    else if (attackingCoolDown > 0)
+    {
+        wattron(curwin, COLOR_PAIR(1));
+        mvwaddch(curwin, yLoc, xLoc, 'X');
+        wattroff(curwin, COLOR_PAIR(1));
+    }
+    else
+    {
+        wattron(curwin, COLOR_PAIR(3));
+        mvwaddch(curwin, yLoc, xLoc, 'X');
+        wattroff(curwin, COLOR_PAIR(3));
+    }
     wrefresh(curwin);
 }
 
@@ -109,9 +141,15 @@ void Player::update()
     {
         parryCoolDown--;
     }
+    if(attackingCoolDown > 0)
+    {
+        attackingCoolDown--;
+    }
     else
     {
         isParrying = false;
         parryCoolDown = 0;
+        isAttacking = false;
+        attackingCoolDown = 0;
     }
 }
