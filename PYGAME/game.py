@@ -4,8 +4,8 @@ import math
 import random
 import pygame
 
-from scripts.utils import load_image, load_images, Animation
-from scripts.entities import PhysicsEntity, Player
+from Scripts.utils import load_image, load_images, Animation
+from Scripts.entities import PhysicsEntity, Player
 
 class Game:
     def __init__(self):
@@ -102,6 +102,7 @@ class Game:
                         self.movement[1] = True
                     if event.key == pygame.K_UP: # jump!, dont care about it's release as I dont want a constant jump on hold
                         if self.player.jump():  # velocity pointing upwards, gravity will pull player back down over time
+                            pass
                     if event.key == pygame.K_x:
                         self.player.dash()
                 if event.type == pygame.KEYUP: # when key is released
