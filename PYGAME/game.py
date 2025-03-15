@@ -11,6 +11,7 @@ from scripts.tilemap import Tilemap
 from scripts.UI import Text
 from scripts.menu import Menu
 from scripts.gameover import GameOver
+from scripts.background import Background
 
 
 class Game:
@@ -45,6 +46,7 @@ class Game:
             'player/crouch': Animation([load_image('PlayerRed/crouch.png')]),
             'player/block': Animation([load_image('PlayerRed/block.png')]),
             'enemy/idle': Animation(load_images('entities/enemy/idle'), img_dur=6),
+            'background': Animation(load_images('backgrounds/game'), img_dur=6),
             'target': load_image('entities/target_round_a.png'),
             'playerbullet': load_image('entities/PlayerBullet.png'),
             'enemybullet': load_image('entities/enemy_bullet.png'),
@@ -89,6 +91,8 @@ class Game:
         # initalizing player
         self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (24, 24))
         self.player.scale = 10
+
+        self.background = Background(self.assets['background'], 1, display=self.display)
 
         # initalizing tilemap
         self.tilemap = Tilemap(self, tile_size=64)
@@ -271,7 +275,6 @@ class Game:
         while True:
             self.display.fill((255, 255, 255))
             # clear the screen for new image generation in loop
-
             self.screenshake = max(0, self.screenshake-1) # resets screenshake value
 
             #Count game timer down if has moved
@@ -300,34 +303,15 @@ class Game:
 
             render_scroll = (0, 0)
 
-            self.ground.render(self.display, offset=render_scroll)
-            self.tilemap.render(self.display, offset=render_scroll)
-
-            for bullet in self.bullets.copy():
-                collided = bullet.update(self.tilemap)
-                if collided:
-                    self.bullets.remove(bullet)
-                else:
-                    if bullet.pos[0] > self.display.get_width():
-                        self.bullets.remove(bullet)
-                    if self.player.pos[1] > self.display.get_height():
-                        self.bullets.remove(bullet)
-                    if self.player.pos[0] < 0 - bullet.size[0]:
-                        self.bullets.remove(bullet)
-                    if self.player.pos[1] < 0 - bullet.size[1]:
-                        self.player.pos[1] = 0 
-                    bullet.render(self.display, offset=render_scroll)
+            # self.ground.render(self.display, offset=render_scroll)
+            # self.tilemap.render(self.display, offset=render_scroll)
+            self.background.draw()
 
             # handle changes in game speed
             if self.slowdown:
                 self.game_speed = 0.4
             else:
                 self.game_speed = 1
-            
-            #update enemies
-            for enemy in self.enemies:
-                enemy.update(self.tilemap, (self.player.pos[0] - enemy.pos[0], self.player.pos[1] - enemy.pos[1]))
-                enemy.render(self.display)
 
             if not self.dead:
                 # update player movement
