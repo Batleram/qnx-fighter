@@ -39,7 +39,7 @@ class Game:
             'obstacles': load_images('tiles/obstacles'),
             'player': load_image('entities/player.png'),
             'player/idle': Animation([load_image('PlayerRed/player.png')]),
-            'player/run': Animation(load_images('PlayerRed/Run'), img_dur=6),
+            'player/run': Animation(load_images('PlayerRed/Run'), img_dur=6.5),
             'player/jump': Animation([load_image('PlayerRed/kick.png')]),
             'player/attack': Animation(load_images('PlayerRed/Attack'), img_dur=6),
             'player/crouch': Animation([load_image('PlayerRed/crouch.png')]),
@@ -405,6 +405,10 @@ class Game:
                         self.player.jump()
                     elif event.key == pygame.K_s:
                         self.player.crouch = True
+                    elif event.key == pygame.K_e:
+                        self.player.attack()
+                    elif event.key == pygame.K_q:
+                        self.player.isBlocking = True
                     self.has_moved = True
                 if event.type == pygame.KEYUP: # when key is released
                     if event.key == pygame.K_a: 
@@ -416,6 +420,10 @@ class Game:
                     elif event.key == pygame.K_s:
                         self.movement[3] = False
                         self.player.crouch = False
+                    elif event.key == pygame.K_e:
+                        self.player.isAttacking = False
+                    elif event.key == pygame.K_q:
+                        self.player.isBlocking = False
                 
             if self.movement[1] - self.movement[0] == 0 and self.movement[3] - self.movement[2] == 0 or self.dead:
                 self.slowdown = True

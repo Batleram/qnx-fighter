@@ -115,6 +115,9 @@ class Player(PhysicsEntity):
         super().__init__(game, 'player', pos, size)
         self.jumps = 1
         self.crouch = False
+        self.timerAction = 0
+        self.isBlocking = False
+        self.isAttacking = False
 
     def jump(self):
         '''
@@ -124,27 +127,51 @@ class Player(PhysicsEntity):
             self.velocity[1] = -5
             self.jumps -= 1
             self.set_action('jump')
+
+    def attack(self):
+        '''
+        player attack
+        '''
+        if self.isBlocking:
+            return
+        
+        self.isAttacking = True
+        self.timerAction = 25
         
 
     def update(self, tilemap, movement=(0,0)):
         '''
         updates players animations depending on movement
         '''
+
+        if self.timerAction > 0:
+            self.timerAction -= 1
+            self.isAttacking = True
+
+        if self.isAttacking:
+            self.set_action('attack')
+            self.isAttacking = False
+        elif self.crouch:
+            self.set_action('crouch')
+            # restrict movement when crouching
+            movement = (0, 0)
+            self.isBlocking = False
+        elif self.jumps == 0:
+            self.set_action('jump')
+            self.isBlocking = False
+        elif self.isBlocking:
+            self.set_action('block')
+        elif movement[0] != 0: # if moving horizontally
+            self.set_action('run')
+            self.isBlocking = False
+        else:
+            self.set_action('idle')
         player_movement = movement
         super().update(tilemap, movement=player_movement)
         movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
         if movement_magnitude > 0:
             player_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
 
-        if self.crouch:
-            self.set_action('crouch')
-            self.velocity[0] = 0
-        elif self.jumps == 0:
-            self.set_action('jump')
-        elif movement[0] != 0: # if moving horizontally
-            self.set_action('run')
-        else:
-            self.set_action('idle')
 
         if self.pos[1] >= (self.game.screen_size[1] - 50):
             self.jumps = 1
