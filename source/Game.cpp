@@ -1,4 +1,5 @@
 #include "Environment.h"
+#include <raylib.h>
 
 int main() {
     // Determine the Game Window Width and Height
@@ -8,7 +9,6 @@ int main() {
     Color screenColor = Color{255, 255, 255, 255};
 
     Environment game = Environment();
-
     
     // Initialize the Window
     InitWindow(screenWidth, screenHeight, "Tetris");

@@ -2,7 +2,7 @@
 
 class Environment {
 public:
-    Game();
+    void Game();
     void Draw();
     void HandleInput();
     void MoveBlockLeft();
