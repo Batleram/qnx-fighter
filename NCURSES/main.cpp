@@ -2,6 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include "player.h"
 using namespace std;
 
 int main(int argc, char ** argv)
@@ -21,6 +22,15 @@ int main(int argc, char ** argv)
 	box(playwin, 0, 0);
 	refresh();
 	wrefresh(playwin);
+
+	// add player to the screen
+	Player * p = new Player(playwin, 1, 1);
+	while(p->getMovement()!='x') // x to exit
+	{
+		p->update();
+		p->display();
+		wrefresh(playwin);
+	}
 
 	// wait before closing
 	getch();
