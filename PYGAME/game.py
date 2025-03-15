@@ -5,7 +5,7 @@ import random
 import pygame, os
 
 from scripts.utils import load_image, load_images, Animation
-from scripts.entities import Player, Enemy
+from scripts.entities import Player, Player2
 from scripts.bullet import Bullet
 from scripts.tilemap import Tilemap
 from scripts.UI import Text
@@ -40,11 +40,18 @@ class Game:
             'obstacles': load_images('tiles/obstacles'),
             'player': load_image('ryo/player.png'),
             'player/idle': Animation(load_images('ryo/idle')),
-            'player/run': Animation(load_images('ryo/idle'), img_dur=4),
+            'player/run': Animation(load_images('ryo/walk'), img_dur=4),
             'player/jump': Animation(load_images('ryo/jump'), img_dur=4),
             'player/attack': Animation(load_images('ryo/attack'), img_dur=4),
             'player/kick': Animation(load_images('ryo/kick'), img_dur=4),
             'player/block': Animation([load_image('ryo/Block1.png')]),
+            'player2': load_image('lori/player.png'),
+            'player2/idle': Animation(load_images('lori/idle')),
+            'player2/run': Animation(load_images('lori/walk'), img_dur=4),
+            'player2/jump': Animation(load_images('lori/jump'), img_dur=4),
+            'player2/attack': Animation(load_images('lori/attack'), img_dur=4),
+            'player2/kick': Animation(load_images('lori/kick'), img_dur=4),
+            'player2/block': Animation([load_image('lori/Block1.png')]),
             'enemy/idle': Animation(load_images('entities/enemy/idle'), img_dur=6),
             'background': Animation(load_images('backgrounds/game'), img_dur=6),
             'target': load_image('entities/target_round_a.png'),
@@ -90,7 +97,10 @@ class Game:
 
         # initalizing player
         self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (70, 113))
-        self.player.scale = 2
+        self.player.scale = 3
+
+        self.player2 = Player2(self, (self.display.get_width()/2, self.display.get_height()/2), (70, 113))
+        self.player2.scale = 3
 
         self.background = Background(self.assets['background'], 1, display=self.display)
 
@@ -241,15 +251,13 @@ class Game:
 
         self.dead = 0
 
-        self.player.pos = [self.display.get_width()/2, self.display.get_height()/2]
+        self.player.pos = [self.display.get_width()/2 - 200, self.display.get_height()/2]
+
+        self.player2.pos = [self.display.get_width()/2 + 100, self.display.get_height()/2]
 
         self.movement = [False, False, False, False]  # left, right, up, down
         self.slowdown = 0 # slow down the game
         self.game_speed = 1
-
-        #Enemy spawn wait (milliseconds)
-        self.enemy_timer_reset = 1600
-        self.enemy_timer = self.enemy_timer_reset
 
         self.enemies = []
         self.bullets = []
@@ -281,25 +289,6 @@ class Game:
             if self.has_moved and not self.dead:
                 self.game_timer -= self.deltatime * (1 + self.slowdown * (self.slowdown_timer_change -1))
 
-            
-            #Count down if has moved, if time elapsed spawn enemy
-            if self.has_moved:
-                self.enemy_timer -= self.deltatime * (1 - (self.slowdown * (self.slowdown_timer_change-1)/self.slowdown_timer_change))
-            if self.enemy_timer < 0:
-                enemy_pos = [100, 100]
-                if random.randint(0, 1) == 0:
-                    enemy_pos[0] = 0 + ((self.display.get_width() + 42) * random.randint(0, 1)) - 42
-                    enemy_pos[1] = random.randint(0, self.display.get_height() + 42) - 42
-                else:
-                    enemy_pos[1] = 0 + ((self.display.get_height() + 42) * random.randint(0, 1)) - 42
-                    enemy_pos[0] = random.randint(0, self.display.get_width() + 42) - 42
-                new_enemy = Enemy(self, enemy_pos, (42, 42))
-                self.enemies.append(new_enemy)
-                #next wait (milliseconds)
-                self.enemy_timer_reset -= 100
-                if self.enemy_timer_reset < 700:
-                    self.enemy_timer_reset = 700
-                self.enemy_timer = self.enemy_timer_reset
 
             render_scroll = (0, 0)
 
@@ -325,6 +314,7 @@ class Game:
                 if self.player.pos[1] < 0:
                     self.player.pos[1] = 0 
                 self.player.render(self.display, offset=render_scroll)
+                self.player2.render(self.display, offset=render_scroll)
 
             for spark in self.sparks:
                 spark.update()

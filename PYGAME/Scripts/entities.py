@@ -189,38 +189,86 @@ class Player(PhysicsEntity):
         '''
         super().render(surf, offset=offset) # show player
 
-class Enemy(PhysicsEntity):
+
+class Player2(PhysicsEntity):
     def __init__(self, game, pos, size):
         '''
-        instantiates the enemies
-        (game, position: tuple, size)
+        instantiates player entity
+        (game, position, size)
         '''
-        super().__init__(game, 'enemy', pos, size)
-        self.set_action('idle')
-        self.shoot_speed = 700
-        self.shoot_wait = self.shoot_speed
-    
+        super().__init__(game, 'player2', pos, size) # IMPORTANT DO NOT REMOVE
+        self.jumps = 1
+        self.crouch = False
+        self.timerAction = 0
+        self.isBlocking = False
+        self.isAttacking = False
+
+    def jump(self):
+        '''
+        player jump
+        '''
+        if self.jumps > 0:
+            self.velocity[1] = -5
+            self.jumps -= 1
+            self.set_action('jump')
+
+    def attack(self):
+        '''
+        player attack
+        '''
+        if self.isBlocking:
+            return
+        
+        self.isAttacking = True
+        self.timerAction = 25
+        
+
     def update(self, tilemap, movement=(0,0)):
-        self.shoot_wait -= self.game.deltatime * (1 - (self.game.slowdown * (self.game.slowdown_timer_change-1)/self.game.slowdown_timer_change))
-        if self.shoot_wait < 0:
-            dx = self.game.player.rect().centerx - self.rect().centerx
-            dy = self.game.player.rect().centery - self.rect().centery
-            bullet_angle = math.atan2(dx, -dy) - (math.pi/2)
-            new_bullet = Bullet(self.game, self.rect().center, 7, bullet_angle, size=(18, 18), type='enemy')
-            self.game.bullets.append(new_bullet)
-            self.shoot_wait = self.shoot_speed
-        enemy_movement = movement
+        '''
+        updates players animations depending on movement
+        '''
+
+        if self.timerAction > 0:
+            self.timerAction -= 1
+            self.isAttacking = True
+
+        if self.isAttacking:
+            self.set_action('attack')
+            self.isAttacking = False
+        elif self.crouch:
+            self.set_action('crouch')
+            # restrict movement when crouching
+            movement = (0, 0)
+            self.isBlocking = False
+        elif self.jumps == 0:
+            self.set_action('jump')
+            self.isBlocking = False
+        elif self.isBlocking:
+            self.set_action('block')
+        elif movement[0] != 0: # if moving horizontally
+            self.set_action('run')
+            self.isBlocking = False
+        else:
+            self.set_action('idle')
+        player_movement = movement
+        super().update(tilemap, movement=player_movement)
         movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
         if movement_magnitude > 0:
-            enemy_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
-        enemy_movement = [enemy_movement[0] * 0.75, enemy_movement[1] * 0.75]
+            player_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
 
-        super().update(tilemap, movement=enemy_movement)
-        if self.rect().colliderect(self.game.player.rect()):
-            if not self.game.dead:
-                self.game.sfx['player_death'].play(0)
-            self.game.dead += 1
-            
 
-    def render(self, surf, offset=(0, 0)):
-        super().render(surf, offset=offset)
+        if self.pos[1] >= (self.game.screen_size[1] - 50):
+            self.jumps = 1
+
+        # normalize horizontal vel "HORIZONTAL"
+        if self.velocity[0] > 0:
+            self.velocity[0] = max(self.velocity[0] - 0.1, 0) # right falling to left
+        else:
+            self.velocity[0] = min(self.velocity[0] + 0.1, 0) # left falling to to right
+
+
+    def render(self, surf, offset={0,0}):
+        '''
+        partly overriding rendering for dashing
+        '''
+        super().render(surf, offset=offset) # show player
