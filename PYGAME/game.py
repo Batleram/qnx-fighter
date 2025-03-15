@@ -34,6 +34,7 @@ class Game:
             'player/jump': Animation(load_images('PlayerBlue/kick')),
             'player/block': Animation(load_images('PlayerBlue/block')),
             'player/crouch': Animation(load_images('PlayerBlue/block')),
+            'background': Animation(load_images('Background'))
         }
 
         # initalizing player
