@@ -36,11 +36,11 @@ class PhysicsEntity:
                 return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
             else:
                 pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-                return pygame.Rect(self.pos[0]-100, self.pos[1], self.size[0], self.size[1])
+                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
         else:
             if self.flip:
                 pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-                return pygame.Rect(self.pos[0]-100, self.pos[1], self.size[0], self.size[1])
+                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
             else:
                 pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
                 return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
@@ -55,7 +55,6 @@ class PhysicsEntity:
             self.animation = self.game.assets[self.type + '/' + self.action].copy()
 
 
-    
     def update(self, tilemap, movement=(0,0)):
         '''
         updates frames and entitiy position 
