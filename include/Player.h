@@ -17,6 +17,7 @@ enum Ability {
 
 class Player {
     public: 
+        Player();
         enum Movement movement;
         enum Ability ability;
         void Update();

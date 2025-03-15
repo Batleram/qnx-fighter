@@ -1,6 +1,15 @@
 #include "Player.h" // header in local directory
 #include <iostream> // header in standard library
 
+Player::Player() {
+  Health = 100;
+  isJumping = false;
+  isCrouching = false;
+  enum Movement movement = Movement::LEFT;
+  enum Ability ability = Ability::IDLE;
+
+}
+
 void Player::Update(){
 }
 
@@ -18,16 +27,4 @@ void Player::HandleAbility(enum Ability ability) {
 
 void Player::TakeDamage(int damage) {
   Health -= damage;
-}
-
-int Player::getHealth() {
-  return Health;
-}
-
-bool Player::getJumping() {
-  return isJumping;
-}
-
-bool Player::getCrouching() {
-  return isCrouching;
 }
