@@ -1,5 +1,6 @@
-#include <raylib.h>
 #include "Environment.h"
+#include <raylib.h>
+
 
 int main() {
     // Determine the Game Window Width and Height
