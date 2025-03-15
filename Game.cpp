@@ -6,13 +6,14 @@ int main() {
     const int screenWidth = 300;
     const int screenHeight = 600;
 
+    // Set Background White to re-blit sprites
     Color screenColor = Color{255, 255, 255, 255};
 
-    Environment game = Environment();
+    Environment Game = Environment();
 
     
     // Initialize the Window
-    InitWindow(screenWidth, screenHeight, "Tetris");
+    InitWindow(screenWidth, screenHeight, "Street Fighter");
 
     // Setting the Frames Per Second
     SetTargetFPS(60);
@@ -20,13 +21,13 @@ int main() {
     // The Game Loop
     while (!WindowShouldClose() /*WindowShouldClose returns true if esc is clicked and closes the window*/) {
 
-        game.HandleInput();
+        Game.HandleInput();
         // Setup Canvas
         BeginDrawing();
         // Clear canvas to a specific color to avoid flicker
         ClearBackground(screenColor);
 
-        game.Draw();
+        Game.Draw();
 
         // teardown Canvas
         EndDrawing();

@@ -2,12 +2,9 @@
 
 class Environment {
 public:
-    Game();
+    Environment();
     void Draw();
     void HandleInput();
-    void MoveBlockLeft();
-    void MoveBlockRight();
-    void MoveBlockDown();
     // to be implemented
     // void Update();
     // void CheckCollision();
