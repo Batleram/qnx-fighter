@@ -38,13 +38,13 @@ class Game:
         self.assets = {
             'ground': load_images('tiles/ground'),
             'obstacles': load_images('tiles/obstacles'),
-            'player': load_image('entities/player.png'),
-            'player/idle': Animation([load_image('PlayerRed/player.png')]),
-            'player/run': Animation(load_images('PlayerRed/Run'), img_dur=6.5),
-            'player/jump': Animation([load_image('PlayerRed/kick.png')]),
-            'player/attack': Animation(load_images('PlayerRed/Attack'), img_dur=6),
-            'player/crouch': Animation([load_image('PlayerRed/crouch.png')]),
-            'player/block': Animation([load_image('PlayerRed/block.png')]),
+            'player': load_image('ryo/player.png'),
+            'player/idle': Animation(load_images('ryo/idle')),
+            'player/run': Animation(load_images('ryo/idle'), img_dur=4),
+            'player/jump': Animation(load_images('ryo/jump'), img_dur=4),
+            'player/attack': Animation(load_images('ryo/attack'), img_dur=4),
+            'player/kick': Animation(load_images('ryo/kick'), img_dur=4),
+            'player/block': Animation([load_image('ryo/Block1.png')]),
             'enemy/idle': Animation(load_images('entities/enemy/idle'), img_dur=6),
             'background': Animation(load_images('backgrounds/game'), img_dur=6),
             'target': load_image('entities/target_round_a.png'),
@@ -89,8 +89,8 @@ class Game:
 
 
         # initalizing player
-        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (24, 24))
-        self.player.scale = 10
+        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (70, 113))
+        self.player.scale = 2
 
         self.background = Background(self.assets['background'], 1, display=self.display)
 
