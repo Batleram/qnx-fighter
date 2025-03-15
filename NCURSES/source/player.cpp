@@ -75,7 +75,7 @@ void Player::parry()
 
 void Player::attack()
 {
-    if (attackingCoolDown > 0 | parryCoolDown > 0)
+    if (attackingCoolDown > 0 || parryCoolDown > 0)
     {
         return;
     }

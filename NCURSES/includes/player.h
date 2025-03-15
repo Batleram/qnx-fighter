@@ -12,6 +12,7 @@ class Player
         int getMovement();
         void display();
         void update();
+        void collision(int box);
     private:
         int Health;
         bool isParrying; // invulnerable state
