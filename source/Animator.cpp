@@ -23,7 +23,7 @@ void Animator::LoadImages(std::string path, int numOfSprites) {
     }
 }
 
-void Animator::Draw(Vector2D position) {
+void Animator::Draw(Vector2 position) {
     // Draw the current frame using the position (from player)
     DrawTexture(Images[Frame], position.x, position.y, WHITE);
 }
