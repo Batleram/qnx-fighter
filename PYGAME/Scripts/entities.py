@@ -20,7 +20,7 @@ class PhysicsEntity:
         self.flip = False
 
         self.action = ''
-        self.anim_offset = (-50, -100) #renders with an offset to pad the animation against the hitbox
+        self.anim_offset = (0, 0) #renders with an offset to pad the animation against the hitbox
         self.set_action('idle')
 
         self.last_movement = [0, 0]
