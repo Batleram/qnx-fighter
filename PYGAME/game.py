@@ -4,8 +4,8 @@ import math
 import random
 import pygame
 
-from scripts.utils import load_image, load_images, Animation
-from scripts.entities import PhysicsEntity, Player
+from Scripts.utils import load_image, load_images, Animation
+from Scripts.entities import PhysicsEntity, Player
 
 class Game:
     def __init__(self):
