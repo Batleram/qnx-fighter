@@ -1,4 +1,5 @@
 #include "Animator.h"
+#include <vector>
 #include <raylib.h>
 
 
@@ -8,7 +9,6 @@ Animator::Animator() {
     Done = false;
     Frame = 0;
     vector<Texture2D> Images;
-
 }
 
 Texture2D Animator::LoadImage(std::string path) {
@@ -26,21 +26,27 @@ void Animator::LoadImages(std::string path, int numOfSprites) {
 
 void Animator::Draw(Vector2D position) {
     // Draw the current frame using the position (from player)
-    DrawTexture(Images[frame], position.x, position.y, WHITE);
+    DrawTexture(Images[Frame], position.x, position.y, WHITE);
 }
 
 void Animator::Update() {
     // Update the frame
-
     if (Loop) 
     {
         Frame = (Frame + 1) % Images.size();
     }
     else 
     {
-        contine; // after i switch to max X.X
+        Frame = min(Frame + 1, Img_duration * Images.size() - 1);
+        if (Frame >= Img_duration * Images.size() - 1)
+        {
+            // This is for timed animations
+            Done = True; 
+        }     
     }
+}
 
 Texture2D Animator::GetFrame() {
+    // Return the current frame
     return images[frame];
 }
