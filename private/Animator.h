@@ -2,7 +2,8 @@
 #include <vector>
 
 class Animator {
-    public: 
+    public:
+        Animator();
         Texture2D LoadImage(std::string path);
         void LoadImages(std::string path, int numOfSprites);
         void Draw();
