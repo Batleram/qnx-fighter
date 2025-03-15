@@ -34,7 +34,7 @@ class Editor:
         #initalizing tilemap
         self.tilemap = Tilemap(self, tile_size=64)
 
-        self.curr_level = 'data/maps/main_menu'
+        self.curr_level = 'data/maps/map'
 
         try: # only load the map if it exists
             self.tilemap.load(self.curr_level + '.json')
