@@ -22,7 +22,7 @@ int main(int argc, char ** argv)
 	// get screen demensions
 	int xMax, yMax;
 	getmaxyx(stdscr, yMax, xMax);
-
+	start_color();
 	// create a window for our input
 	WINDOW * playwin = newwin(20, 50, (yMax/2)-10, 10);
 	box(playwin, 0, 0);
