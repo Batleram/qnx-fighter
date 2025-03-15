@@ -66,6 +66,8 @@ class Game:
             'click': load_image('UI/click.png'),
             'button': load_image('UI/button.png'),
             'button': load_image('UI/button.png'),
+            '1': load_image('UI/1.png'),
+            '2': load_image('UI/2.png'),
         }
 
         # adding sound

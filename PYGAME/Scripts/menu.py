@@ -21,15 +21,18 @@ class Menu():
 
         self.Move = Text(' Up - Jump \n Down - Block \n Left\Right - Move', [430, 450])
 
-        self.ESC = Image(self.game.assets['ESC'].copy(), [1300,330], 10, .3)
-        self.ESC.scale(4)
 
-        self.Leave = Text('Exit', [1300, 450])
+        # A
+        self.click = Image(self.game.assets['2'].copy(), [890, 300], 10, .4)
+        self.click.scale(2)
 
-        self.click = Image(self.game.assets['click'].copy(), [940, 335], 10, .4)
-        self.click.scale(4)
+        self.Click = Text('Kick', [910, 450])
 
-        self.Click = Text('Shoot', [920, 450])
+        # B
+        self.ESC = Image(self.game.assets['1'].copy(), [1290,300], 10, .3)
+        self.ESC.scale(2)
+
+        self.Leave = Text('Attack', [1300, 450])
 
 
 
