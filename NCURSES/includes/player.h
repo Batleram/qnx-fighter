@@ -1,5 +1,4 @@
 #include <curses.h>
-using namespace std;
 class Player
 {
     public: 
@@ -19,4 +18,4 @@ class Player
         //Time cooldown;
         int xLoc, yLoc, xMax, yMax;
         WINDOW * curwin;        
-}
+};
