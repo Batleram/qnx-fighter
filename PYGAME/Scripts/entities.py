@@ -138,7 +138,6 @@ class Player(PhysicsEntity):
         self.timerAction = 0
         self.health = 5
         self.isBlocking = False
-        self.isJumping = False
         self.isAttacking = False
 
     def jump(self):
@@ -148,13 +147,13 @@ class Player(PhysicsEntity):
         if self.jumps > 0:
             self.velocity[1] = -2
             self.jumps -= 1
-            self.isJumping = True
+            self.set_action('jump')
 
     def attack(self):
         '''
         player attack
         '''
-        if self.isBlocking or self.isJumping:
+        if self.isBlocking:
             return
         
         self.isAttacking = True
@@ -169,10 +168,6 @@ class Player(PhysicsEntity):
         if self.timerAction > 0 and self.isAttacking:
             self.timerAction -= 1
             self.isAttacking = True
-        
-        if self.timerAction > 0 and self.isJumping:
-            self.timerAction -= 1
-            self.isJumping = True
 
         if self.isAttacking:
             self.set_action('attack')
@@ -182,10 +177,9 @@ class Player(PhysicsEntity):
             # restrict movement when crouching
             movement = (0, 0)
             self.isBlocking = False
-        elif self.jumps == 0 and self.isJumping:
+        elif self.jumps == 0:
             self.set_action('jump')
             self.isBlocking = False
-            self.isJumping = False
         elif self.isBlocking:
             self.set_action('block')
         elif movement[0] != 0: # if moving horizontally
