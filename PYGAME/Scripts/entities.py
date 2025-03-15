@@ -30,8 +30,20 @@ class PhysicsEntity:
         creates a rectangle at the entitiies current postion
         '''
         # draw a rectangle around the entity
-        pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
-        return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
+        if self.type == "player":
+            if self.flip:
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
+            else:
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0]-100, self.pos[1], self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0]-100, self.pos[1], self.size[0], self.size[1])
+        else:
+            if self.flip:
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0]-100, self.pos[1], self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0]-100, self.pos[1], self.size[0], self.size[1])
+            else:
+                pygame.draw.rect(self.game.display, (255, 0, 0), (self.pos[0], self.pos[1], self.size[0], self.size[1]), 2)
+                return pygame.Rect(self.pos[0], self.pos[1], self.size[0], self.size[1])
     
     def set_action(self, action):
         '''
@@ -132,7 +144,7 @@ class Player(PhysicsEntity):
         player jump
         '''
         if self.jumps > 0:
-            self.velocity[1] = -5
+            self.velocity[1] = -2
             self.jumps -= 1
             self.set_action('jump')
 
