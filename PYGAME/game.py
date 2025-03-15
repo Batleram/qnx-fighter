@@ -149,20 +149,20 @@ class Game:
             self.title.render(self.display, 120, (0,0,0))
             self.title2.render(self.display, 120, (255,255,255))
 
-            self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)), (850, 485))
-            start_text = Text('Start', (920, 509))
+            self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)), (800, 485))
+            start_text = Text('Start - UP', (900, 509))
             start_text.render(self.display, 50, color=(0, 0, 0))
-            start_rect = pygame.Rect(850, 485, self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)
+            start_rect = pygame.Rect(800, 485, self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)
 
-            self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)), (850, 635))
-            controls_text = Text('Tutorial', (900, 659))
+            self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)), (800, 635))
+            controls_text = Text('Tutorial - Attack', (850, 659))
             controls_text.render(self.display, 50, color=(0, 0, 0))
-            controls_rect = pygame.Rect(850, 635, self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)
+            controls_rect = pygame.Rect(800, 635, self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)
 
-            self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)), (850, 785))
-            quit_text = Text('Quit', (920, 809))
+            self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)), (800, 785))
+            quit_text = Text('Quit - Kick', (880, 809))
             quit_text.render(self.display, 50, color=(0, 0, 0))
-            quit_rect = pygame.Rect(850, 785, self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)
+            quit_rect = pygame.Rect(800, 785, self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)
 
             if self.isPlayer1Ready and self.isPlayer2Ready:
                 self.gamestart = self.gamestart -1
