@@ -2,7 +2,7 @@ import os
 
 import pygame
 
-BASE_IMG_PATH = 'data/sprites/'
+BASE_IMG_PATH = 'data/images/'
 
 def load_image(path):
     '''
