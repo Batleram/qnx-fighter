@@ -5,24 +5,21 @@ class Menu():
         ''' create the menu UI'''
         self.game = game
 
-
-        self.explain3 = Text('Killing enemies gives you more time, but shooting takes time away.', [370, 540])
-        self.explain = Text('When you stop moving, everything slows down, but the timer counts down faster.', [260, 600])
-        self.explain2 = Text('Try to die with as much time left!', [680, 660])
+        self.explain2 = Text('Good Luck and Have Fun!', [680, 660])
 
 
         # WASD
         # (self, img, pos, speed)
-        self.W = Image(self.game.assets['W'].copy(), [500,300], 10, .5)
+        self.W = Image(self.game.assets['W'].copy(), [500,250], 10, .5)
         self.W.scale(4) 
-        self.A = Image(self.game.assets['A'].copy(), [445,360], 10, .5)
+        self.A = Image(self.game.assets['A'].copy(), [445,305], 10, .5)
         self.A.scale(4)
         self.S = Image(self.game.assets['S'].copy(), [500,360], 10, .5)
         self.S.scale(4)
-        self.D = Image(self.game.assets['D'].copy(), [555,360], 10, .5)
+        self.D = Image(self.game.assets['D'].copy(), [555,305], 10, .5)
         self.D.scale(4)
 
-        self.Move = Text('Movement', [450, 450])
+        self.Move = Text('Up - Jump \nDown - Block \nLeft\Right - Move', [450, 450])
 
         self.ESC = Image(self.game.assets['ESC'].copy(), [1300,330], 10, .3)
         self.ESC.scale(4)
@@ -56,8 +53,6 @@ class Menu():
         self.Move.render(self.game.display, 50, (0,0,0))
         self.Leave.render(self.game.display, 50, (0,0,0))
         self.Click.render(self.game.display, 50, (0,0,0))
-        self.explain3.render(self.game.display, 50, (0,0,0))
-        self.explain.render(self.game.display, 50, (0,0,0))
         self.explain2.render(self.game.display, 50, (0,0,0))
 
 
