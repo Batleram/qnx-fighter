@@ -128,6 +128,11 @@ class Game:
         self.playmus = True
         self.playmenumus = True
 
+
+        self.isPlayer1Ready = False
+        self.isPlayer2Ready = False
+        self.gamestart = 70
+
         pygame.mouse.set_visible(False)
     def main_menu(self):
         self.ost['battleloop'].stop()
@@ -159,33 +164,42 @@ class Game:
             quit_text.render(self.display, 50, color=(0, 0, 0))
             quit_rect = pygame.Rect(850, 785, self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)
 
-            mpos = pygame.mouse.get_pos() # gets mouse positon
-            mpos = (mpos[0] / (self.screen_size[0]/self.display.get_width()), mpos[1] / (self.screen_size[1]/self.display.get_height())) # since screen sometimes scales
-            self.display.blit(pygame.transform.scale(self.assets['target'], (32, 32)), (mpos[0], mpos[1]))
+            if self.isPlayer1Ready and self.isPlayer2Ready:
+                self.gamestart = self.gamestart -1
+                if self.gamestart < 0:
+                    self.gamestart = 70
+                    self.run()
+
+            if self.isPlayer1Ready:
+                # display player 1 ready
+                self.display.blit(pygame.transform.scale(self.assets['player'], (300, 300)), (450, 485))
+            if self.isPlayer2Ready:
+                # display player 2 ready
+                self.display.blit(pygame.transform.scale(self.assets['player2'], (300, 300)), (1200, 485))
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT: # have to code the window closing
                     pygame.quit()
                     sys.exit()
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    if event.button == 1:
-                        if start_rect.collidepoint(mpos):
-                            self.sfx['select'].play(0)
-                            self.run()
-                        if controls_rect.collidepoint(mpos):
-                            self.sfx['select'].play(0)
-                            self.controls()
-                        if quit_rect.collidepoint(mpos):
-                            pygame.quit()
-                            sys.exit()
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_ESCAPE:
+                    if event.key == pygame.K_w:
+                        self.isPlayer1Ready = True
+                    if event.key == pygame.K_UP:
+                        self.isPlayer2Ready = True
+                    if event.key == pygame.K_s:
+                        self.isPlayer1Ready = False
+                    if event.key == pygame.K_DOWN:
+                        self.isPlayer2Ready = False
+                    if event.key == pygame.K_q: 
+                        self.controls()
+                    if event.key == pygame.K_b:
+                        self.controls()
+                    if event.key == pygame.K_e:
                         pygame.quit()
                         sys.exit()
-                    if event.key == pygame.K_RETURN:
-                        self.sfx['select'].play(0)
-                        self.ost['introstart'].stop()
-                        self.run()
+                    if event.key == pygame.K_n:
+                        pygame.quit()
+                        sys.exit()
             
             self.screen.blit(pygame.transform.scale(self.display, self.screen_size), [0,0])
             pygame.display.update()
@@ -209,14 +223,10 @@ class Game:
                 if event.type == pygame.QUIT: # have to code the window closing
                     pygame.quit()
                     sys.exit()
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    if event.button == 1:
-                        if back_rect.collidepoint(mpos):
-                            self.sfx['select'].play(0)
-                            self.main_menu()
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_ESCAPE:
-                        self.sfx['select'].play(0)
+                    if event.key == pygame.K_q: 
+                        self.main_menu()
+                    if event.key == pygame.K_b:
                         self.main_menu()
 
             # render the main menu
@@ -224,9 +234,6 @@ class Game:
             menu.update()
             menu.render()
 
-            
-
-            
             
             self.screen.blit(pygame.transform.scale(self.display, self.screen_size), [0,0])
             pygame.display.update()
