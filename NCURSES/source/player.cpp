@@ -15,6 +15,7 @@ Player::Player(WINDOW * win, int y, int x)
 
 void Player::moveUp()
 {
+    mvwaddch(curwin, yLoc, xLoc, ' ');
     yLoc--;
     // boundary
     if(yLoc < 1)
@@ -26,6 +27,7 @@ void Player::moveUp()
 
 void Player::moveDown()
 {
+    mvwaddch(curwin, yLoc, xLoc, ' ');
     yLoc++;
     // boundary
     if(yLoc > yMax - 2)
@@ -37,6 +39,7 @@ void Player::moveDown()
 
 void Player::moveLeft()
 {
+    mvwaddch(curwin, yLoc, xLoc, ' ');
     xLoc--;
     // boundary
     if(xLoc < 1)
@@ -48,6 +51,7 @@ void Player::moveLeft()
 
 void Player::moveRight()
 {
+    mvwaddch(curwin, yLoc, xLoc, ' ');
     xLoc++;
     // boundary
     if(xLoc > xMax - 2)
