@@ -85,10 +85,16 @@ class PhysicsEntity:
 
         # find when to flip img for animation
         if movement[0] > 0:
-            self.flip = False
+            if self.type == "player2":
+                self.flip = False
+            else:
+                self.flip = True
         if movement[0] < 0:
-            self.flip = True
-
+            if self.type == "player2":
+                self.flip = True
+            else:
+                self.flip = False
+                
         self.last_movement = movement # keeps track of movement
 
         # gravity aka terminal falling velocity "VERTICLE"
