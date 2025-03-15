@@ -22,7 +22,7 @@ class Game:
         pygame.init()
 
         # change the window caption
-        pygame.display.set_caption("Paint Fighter")
+        pygame.display.set_caption("Street Fighter")
 
         # create window
         self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
@@ -39,6 +39,7 @@ class Game:
         self.assets = {
             'ground': load_images('tiles/ground'),
             'obstacles': load_images('tiles/obstacles'),
+            'menu': load_image('backgrounds/0.png'),
             'player': load_image('ryo/player.png'),
             'player/idle': Animation(load_images('ryo/idle')),
             'player/run': Animation(load_images('ryo/walk'), img_dur=4),
@@ -130,14 +131,14 @@ class Game:
         if self.playmenumus:
             self.ost['introloop'].play(-1)
             self.playmenumus = False
-        self.menu_ground = Tilemap(self, tile_size=64)
-        self.menu_ground.load('data/maps/main_menu.json')
         while True:
-            self.display.fill((255, 255, 255))
-            self.menu_ground.render(self.display, (0, 0))
+            self.display.fill((160, 192, 191))
+            self.display.blit(pygame.transform.scale(self.assets['menu'], self.display.get_size()), (0,0))
 
-            self.title = Text('Paint Fighter', [750, 200])
+            self.title = Text('QNX Fighter', [710, 200])
+            self.title2 = Text('QNX Fighter', [700, 190])
             self.title.render(self.display, 120, (0,0,0))
+            self.title2.render(self.display, 120, (255,255,255))
 
             self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 1.75, self.assets['button'].get_height() * 1.75)), (850, 485))
             start_text = Text('Start', (920, 509))
