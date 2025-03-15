@@ -117,7 +117,7 @@ void Player::display()
     if (parryCoolDown > 0)
     {
         wattron(curwin, COLOR_PAIR(2));
-        mvwaddch(curwin, yLoc, xLoc, 'X');
+        mvwaddch(curwin, yLoc, xLoc, 'P');
         wattroff(curwin, COLOR_PAIR(2));
     }
     else if (attackingCoolDown > 0)
@@ -129,7 +129,7 @@ void Player::display()
     else
     {
         wattron(curwin, COLOR_PAIR(3));
-        mvwaddch(curwin, yLoc, xLoc, 'P');
+        mvwaddch(curwin, yLoc, xLoc, 'X');
         wattroff(curwin, COLOR_PAIR(3));
     }
     wrefresh(curwin);
