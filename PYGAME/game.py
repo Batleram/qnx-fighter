@@ -11,7 +11,6 @@ from scripts.UI import Text
 from scripts.menu import Menu
 from scripts.gameover import GameOver
 
-
 class Game:
     def __init__(self):
         '''

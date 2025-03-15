@@ -121,7 +121,7 @@ class Player(PhysicsEntity):
         player jump
         '''
         if self.jumps > 0:
-            self.velocity[1] = -5
+            self.velocity[1] = -3
             self.jumps -= 1
             self.set_action('jump')
 
