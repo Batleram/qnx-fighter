@@ -38,7 +38,12 @@ class Game:
             'ground': load_images('tiles/ground'),
             'obstacles': load_images('tiles/obstacles'),
             'player': load_image('entities/player.png'),
-            'player/idle': Animation(load_images('entities/player/idle'), img_dur=6),
+            'player/idle': Animation([load_image('PlayerRed/player.png')]),
+            'player/run': Animation(load_images('PlayerRed/Run'), img_dur=6),
+            'player/jump': Animation([load_image('PlayerRed/kick.png')]),
+            'player/attack': Animation(load_images('PlayerRed/Attack'), img_dur=6),
+            'player/crouch': Animation([load_image('PlayerRed/crouch.png')]),
+            'player/block': Animation([load_image('PlayerRed/block.png')]),
             'enemy/idle': Animation(load_images('entities/enemy/idle'), img_dur=6),
             'target': load_image('entities/target_round_a.png'),
             'playerbullet': load_image('entities/PlayerBullet.png'),
@@ -82,7 +87,8 @@ class Game:
 
 
         # initalizing player
-        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (42, 42))
+        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (24, 24))
+        self.player.scale = 10
 
         # initalizing tilemap
         self.tilemap = Tilemap(self, tile_size=64)
@@ -396,9 +402,9 @@ class Game:
                     elif event.key == pygame.K_d: 
                         self.movement[1] = True
                     elif event.key == pygame.K_w:
-                        self.movement[2] = True
+                        self.player.jump()
                     elif event.key == pygame.K_s:
-                        self.movement[3] = True
+                        self.player.crouch = True
                     self.has_moved = True
                 if event.type == pygame.KEYUP: # when key is released
                     if event.key == pygame.K_a: 
@@ -409,6 +415,7 @@ class Game:
                         self.movement[2] = False
                     elif event.key == pygame.K_s:
                         self.movement[3] = False
+                        self.player.crouch = False
                 
             if self.movement[1] - self.movement[0] == 0 and self.movement[3] - self.movement[2] == 0 or self.dead:
                 self.slowdown = True
