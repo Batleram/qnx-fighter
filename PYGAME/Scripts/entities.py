@@ -20,7 +20,7 @@ class PhysicsEntity:
         self.flip = False
 
         self.action = ''
-        self.anim_offset = (0, 0) #renders with an offset to pad the animation against the hitbox
+        self.anim_offset = (-50, -100) #renders with an offset to pad the animation against the hitbox
         self.set_action('idle')
 
         self.last_movement = [0, 0]
@@ -71,7 +71,7 @@ class PhysicsEntity:
         
         # Note: Y-axis collision handling comes after X-axis handling
         self.pos[1] += frame_movement[1]
-        entity_rect = self.rect()  # Update entity rectangle for y-axis handling
+       
         # move tile based on collision on y axis
         for rect in tilemap.physics_rects_around(self.pos):
             if entity_rect.colliderect(rect):
@@ -109,12 +109,12 @@ class PhysicsEntity:
         surf.blit(pygame.transform.flip(newSurf, self.flip, False), (self.pos[0] - offset[0] + self.anim_offset[0], self.pos[1] - offset[1] + self.anim_offset[1])) # fliping agasint horizontal axis
 
 class Player(PhysicsEntity):
-    def __init__(self, game, pos, size):
+    def __init__(self, game, e_type, pos, size):
         '''
         instantiates player entity
         (game, position, size)
         '''
-        super().__init__(game, 'player', pos, size)
+        super().__init__(game, e_type, pos, size)
         self.jumps = 1
         self.crouch = False
         self.timerAction = 0
@@ -173,101 +173,16 @@ class Player(PhysicsEntity):
         # bound the character to within the screen
         if self.pos[0] < 0:
             self.pos[0] = 0
-        if self.pos[0] > (self.game.screen_size[0] - self.size[0]):
-            self.pos[0] = self.game.screen_size[0] - self.size[0]
+        if self.pos[0] > (self.game.screen_size[0] + self.size[0] - self.scale):
+            self.pos[0] = self.game.screen_size[0] + self.size[0] - self.scale
+        if self.pos[1] > (self.game.screen_size[1] - self.size[1]*self.scale):
+            self.pos[1] = self.game.screen_size[1] - self.size[1]*self.scale
+            self.jumps = 1
         
         super().update(tilemap, movement=player_movement)
         movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
         if movement_magnitude > 0:
             player_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
-
-
-        if self.pos[1] >= (self.game.screen_size[1] - 50):
-            self.jumps = 1
-
-        # normalize horizontal vel "HORIZONTAL"
-        if self.velocity[0] > 0:
-            self.velocity[0] = max(self.velocity[0] - 0.1, 0) # right falling to left
-        else:
-            self.velocity[0] = min(self.velocity[0] + 0.1, 0) # left falling to to right
-
-
-    def render(self, surf, offset={0,0}):
-        '''
-        partly overriding rendering for dashing
-        '''
-        super().render(surf, offset=offset) # show player
-
-
-class Player2(PhysicsEntity):
-    def __init__(self, game, pos, size):
-        '''
-        instantiates player entity
-        (game, position, size)
-        '''
-        super().__init__(game, 'player2', pos, size) # IMPORTANT DO NOT REMOVE
-        self.jumps = 1
-        self.crouch = False
-        self.timerAction = 0
-        self.isBlocking = False
-        self.isAttacking = False
-
-    def jump(self):
-        '''
-        player jump
-        '''
-        if self.jumps > 0:
-            self.velocity[1] = -5
-            self.jumps -= 1
-            self.set_action('jump')
-
-    def attack(self):
-        '''
-        player attack
-        '''
-        if self.isBlocking:
-            return
-        
-        self.isAttacking = True
-        self.timerAction = 25
-        
-
-    def update(self, tilemap, movement=(0,0)):
-        '''
-        updates players animations depending on movement
-        '''
-
-        if self.timerAction > 0:
-            self.timerAction -= 1
-            self.isAttacking = True
-
-        if self.isAttacking:
-            self.set_action('attack')
-            self.isAttacking = False
-        elif self.crouch:
-            self.set_action('kick')
-            # restrict movement when crouching
-            movement = (0, 0)
-            self.isBlocking = False
-        elif self.jumps == 0:
-            self.set_action('jump')
-            self.isBlocking = False
-        elif self.isBlocking:
-            self.set_action('block')
-        elif movement[0] != 0: # if moving horizontally
-            self.set_action('run')
-            self.isBlocking = False
-        else:
-            self.set_action('idle')
-        player_movement = movement
-        super().update(tilemap, movement=player_movement)
-        movement_magnitude = math.sqrt((movement[0] * movement[0] + movement[1] * movement[1]))
-        if movement_magnitude > 0:
-            player_movement = (movement[0] / movement_magnitude, movement[1] / movement_magnitude)
-
-
-        if self.pos[1] >= (self.game.screen_size[1] - 50):
-            self.jumps = 1
 
         # normalize horizontal vel "HORIZONTAL"
         if self.velocity[0] > 0:

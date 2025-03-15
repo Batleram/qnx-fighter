@@ -5,7 +5,7 @@ import random
 import pygame, os
 
 from scripts.utils import load_image, load_images, Animation
-from scripts.entities import Player, Player2
+from scripts.entities import Player
 from scripts.bullet import Bullet
 from scripts.tilemap import Tilemap
 from scripts.UI import Text
@@ -98,10 +98,10 @@ class Game:
 
 
         # initalizing player
-        self.player = Player(self, (self.display.get_width()/2, self.display.get_height()/2), (100, 113))
+        self.player = Player(self, 'player', (self.display.get_width()/2, self.display.get_height()/2), (100, 113))
         self.player.scale = 4
 
-        self.player2 = Player2(self, (self.display.get_width()/2, self.display.get_height()/2), (100, 113))
+        self.player2 = Player(self, 'player2', (self.display.get_width()/2, self.display.get_height()/2), (100, 113))
         self.player2.scale = 4
 
         self.background = Background(self.assets['background'], 1, display=self.display)
@@ -256,8 +256,7 @@ class Game:
         self.player.pos = [self.display.get_width()/2 - 200, self.display.get_height()/2]
 
         self.player2.pos = [self.display.get_width()/2 + 100, self.display.get_height()/2]
-
-        self.movement = [False, False, False, False]  # left, right, up, down
+        
         self.slowdown = 0 # slow down the game
         self.game_speed = 1
 
@@ -385,9 +384,9 @@ class Game:
                         self.sfx['select'].play(0)
                         self.run()
                     if event.key == pygame.K_a: # referencing right and left arrow keys
-                        self.movement[0] = True
+                        self.movement1[0] = True
                     elif event.key == pygame.K_d: 
-                        self.movement[1] = True
+                        self.movement1[1] = True
                     elif event.key == pygame.K_w:
                         self.player.jump()
                     elif event.key == pygame.K_s:
@@ -413,13 +412,13 @@ class Game:
                         
                 if event.type == pygame.KEYUP: # when key is released
                     if event.key == pygame.K_a: 
-                        self.movement[0] = False
+                        self.movement1[0] = False
                     elif event.key == pygame.K_d: 
-                        self.movement[1] = False
+                        self.movement1[1] = False
                     elif event.key == pygame.K_w:
-                        self.movement[2] = False
+                        self.movement1[2] = False
                     elif event.key == pygame.K_s:
-                        self.movement[3] = False
+                        self.movement1[3] = False
                         self.player.crouch = False
                     elif event.key == pygame.K_e:
                         self.player.isAttacking = False
@@ -440,10 +439,10 @@ class Game:
                     elif event.key == pygame.K_b:
                         self.player2.isBlocking = False
                 
-            if self.movement[1] - self.movement[0] == 0 and self.movement[3] - self.movement[2] == 0 or self.dead:
-                self.slowdown = True
-            else:
-                self.slowdown = False
+            # if self.movement[1] - self.movement[0] == 0 and self.movement[3] - self.movement[2] == 0 or self.dead:
+            #     self.slowdown = True
+            # else:
+            #     self.slowdown = False
             
 
             screenshake_offset = (random.random() * self.screenshake - self.screenshake / 2, random.random() * self.screenshake - self.screenshake / 2)
