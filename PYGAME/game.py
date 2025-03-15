@@ -155,7 +155,7 @@ class Game:
             start_rect = pygame.Rect(800, 485, self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)
 
             self.display.blit(pygame.transform.scale(self.assets['button'], (self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)), (800, 635))
-            controls_text = Text('Tutorial - Attack', (850, 659))
+            controls_text = Text('Tutorial - Attack', (840, 659))
             controls_text.render(self.display, 50, color=(0, 0, 0))
             controls_rect = pygame.Rect(800, 635, self.assets['button'].get_width() * 2.7, self.assets['button'].get_height() * 1.75)
 
