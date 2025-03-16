@@ -1,6 +1,8 @@
 .DS_Store
 writer
-.vscode
-example
-.venv
 __pycache__
+.vscode/*
+.venv
+game
+example
+*.o
