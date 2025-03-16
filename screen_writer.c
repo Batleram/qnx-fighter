@@ -17,31 +17,36 @@
 #define WINDOW_WIDTH 800
 
 #define CIRCLE_COLOR 0xFFFF0000
+#define HIT_COLOR CIRCLE_COLOR
 
 #define GPIO_P1_L 26
 #define GPIO_P1_R 17
 #define GPIO_P1_1 22
 #define GPIO_P1_2 27
+#define GPIO_P1_HP 10
 #define GPIO_P2_L 18
 #define GPIO_P2_R 25
 #define GPIO_P2_1 5
 #define GPIO_P2_2 6
+#define GPIO_P2_HP 20
 
 #define MOVEMENT_SPEED 5
-#define ATTACK_RADIUS ( PLAYER_HEIGHT + 100 ) / 2
+#define ATTACK_RADIUS (PLAYER_HEIGHT + 100) / 2
 
 #define PLAYER_HEIGHT 240
+#define MAX_HP 3
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
 
 typedef struct {
   int x;
   int hitting;
+  int hp;
+  int hp_dirty;
 } Player;
 
-Player p1 = {.x = 200, .hitting = 0};
-
-Player p2 = {.x = 400, .hitting = 0};
+Player p1 = {.x = 200, .hitting = 0, .hp = MAX_HP, .hp_dirty = 1};
+Player p2 = {.x = 400, .hitting = 0, .hp = MAX_HP, .hp_dirty = 1};
 
 void draw_player(Player *p, int *buffer, int stride) {
   int *lbuffer = buffer;
@@ -145,9 +150,13 @@ void setup_gpios() {
   rpi_gpio_set_select(GPIO_P1_L, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P1_R, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P1_1, RPI_GPIO_FUNC_IN);
+  rpi_gpio_set_select(GPIO_P1_2, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_L, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_R, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_1, RPI_GPIO_FUNC_IN);
+  rpi_gpio_set_select(GPIO_P2_2, RPI_GPIO_FUNC_IN);
+  rpi_gpio_set_select(GPIO_P1_HP, RPI_GPIO_FUNC_OUT);
+  rpi_gpio_set_select(GPIO_P2_HP, RPI_GPIO_FUNC_OUT);
 }
 
 void handle_inputs() {
@@ -159,6 +168,11 @@ void handle_inputs() {
     move_player_left(&p2);
   if (rpi_gpio_read(GPIO_P2_R))
     move_player_right(&p2);
+
+  if (rpi_gpio_read(GPIO_P1_2))
+    p1.hp_dirty = 1;
+  if (rpi_gpio_read(GPIO_P2_2))
+    p2.hp_dirty = 1;
 
   p1.hitting = rpi_gpio_read(GPIO_P1_1);
   p2.hitting = rpi_gpio_read(GPIO_P2_1);
@@ -196,6 +210,57 @@ void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
   err = screen_post_window(*screen_window, *screen_buf, 0, NULL, 0);
   if (err != 0) {
     printf("Failed to post window\n");
+  }
+}
+
+#define TRANSFORM -235
+
+// send a color to one WS812B LED in the chain
+void shift_out(int pin, int count) {
+  struct timespec start, stop;
+  double accum;
+
+  if (clock_gettime(CLOCK_REALTIME, &start) == -1) {
+    perror("clock gettime");
+    return;
+  }
+  // WS812B is green then red then blue, MSB first
+  uint8_t vals[3] = {0x00, 0xFF, 0x00};
+
+  for (int l = 0; l <= count; l++) {
+    for (int c = 0; c < 3; c++) {
+      for (int i = 0; i < 8; i++) {
+        int bit = vals[c] << i & 0x80;
+        rpi_gpio_set(pin);
+        nanospin_ns((bit ? 800 : 400)TRANSFORM);
+        rpi_gpio_clear(pin);
+        nanospin_ns((bit ? 450 : 850)TRANSFORM);
+      }
+    }
+  }
+
+  if (clock_gettime(CLOCK_REALTIME, &stop) == -1) {
+    perror("clock gettime");
+    return;
+  }
+
+  accum = (stop.tv_sec - start.tv_sec) + (double)(stop.tv_nsec - start.tv_nsec);
+  printf("Write took: %lf ns\n", accum);
+}
+
+void *render_lights(void *args) {
+  while (1) {
+    if (p1.hp_dirty == 1) {
+      shift_out(GPIO_P1_HP, p1.hp);
+      p1.hp_dirty = 0;
+    }
+
+    if (p2.hp_dirty == 1) {
+      shift_out(GPIO_P2_HP, p2.hp);
+      p2.hp_dirty = 0;
+    }
+
+    delay(50);
   }
 }
 
@@ -258,6 +323,22 @@ int main(void) {
   }
 
   setup_gpios();
+
+  // init threads
+  nanospin_calibrate(1);
+
+  // launch `update` as a high priority thread
+  pthread_attr_t attr;
+  pthread_attr_init(&attr);
+  pthread_attr_setinheritsched(&attr, PTHREAD_EXPLICIT_SCHED);
+
+  int max_priority = sched_get_priority_max(SCHED_FIFO);
+  struct sched_param sched = {.sched_priority = max_priority};
+  pthread_attr_setschedparam(&attr, &sched);
+
+  pthread_t thr_update;
+  if (pthread_create(&thr_update, &attr, render_lights, NULL) == -1)
+    perror("pthread_create"), exit(EXIT_FAILURE);
 
   /* Trap execution */
   while (1) {
