@@ -36,3 +36,14 @@ Just run the `game.py` file bro
 
 There is a build.sh file, it will compile for your local system. We have not setup the workflow to compile for QNX
 Make sure you're on a unix-like system that supports the NCurses library.
+
+
+# SHOWCASE
+![20250316_022835](https://github.com/user-attachments/assets/4f2e7afa-7faa-47d5-99ad-bfe2e863f2da)
+![20250316_022844](https://github.com/user-attachments/assets/ec5fa6d3-1d35-43b7-a717-cd2123ea788f)
+![20250316_022857](https://github.com/user-attachments/assets/85b1e411-76eb-4b6d-a6a1-40184dd5f330)
+![20250316_022908](https://github.com/user-attachments/assets/30c80f5f-4bce-4da9-ac52-0d178afcbbda)
+
+
+
+
