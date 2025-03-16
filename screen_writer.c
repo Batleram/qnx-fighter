@@ -1,6 +1,7 @@
 #include <aarch64/rpi_gpio.h>
 #include <math.h>
 #include <pthread.h>
+#include <rpi_ws281x.h>
 #include <screen/screen.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -37,6 +38,52 @@
 #define MAX_HP 3
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
+
+ws2811_t p1hpstrip = {
+    .freq = WS2811_TARGET_FREQ,
+    .channel =
+        {
+            [0] =
+                {
+                    .gpionum = GPIO_P1_HP,
+                    .invert = 0,
+                    .count = 6,
+                    .strip_type = WS2811_STRIP_GRB,
+                    .brightness = 255,
+                },
+            // no second channel
+            [1] =
+                {
+                    .gpionum = -1,
+                    .invert = 0,
+                    .count = 0,
+                    .brightness = 0,
+                },
+        },
+};
+
+ws2811_t p2hpstrip = {
+    .freq = WS2811_TARGET_FREQ,
+    .channel =
+        {
+            [0] =
+                {
+                    .gpionum = GPIO_P2_HP,
+                    .invert = 0,
+                    .count = 6,
+                    .strip_type = WS2811_STRIP_GRB,
+                    .brightness = 255,
+                },
+            // no second channel
+            [1] =
+                {
+                    .gpionum = -1,
+                    .invert = 0,
+                    .count = 0,
+                    .brightness = 0,
+                },
+        },
+};
 
 typedef struct {
   int x;
@@ -155,8 +202,6 @@ void setup_gpios() {
   rpi_gpio_set_select(GPIO_P2_R, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_1, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_2, RPI_GPIO_FUNC_IN);
-  rpi_gpio_set_select(GPIO_P1_HP, RPI_GPIO_FUNC_OUT);
-  rpi_gpio_set_select(GPIO_P2_HP, RPI_GPIO_FUNC_OUT);
 }
 
 void handle_inputs() {
@@ -213,51 +258,33 @@ void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
   }
 }
 
-#define TRANSFORM -235
-
-// send a color to one WS812B LED in the chain
-void shift_out(int pin, int count) {
-  struct timespec start, stop;
-  double accum;
-
-  if (clock_gettime(CLOCK_REALTIME, &start) == -1) {
-    perror("clock gettime");
-    return;
-  }
-  // WS812B is green then red then blue, MSB first
-  uint8_t vals[3] = {0x00, 0xFF, 0x00};
-
-  for (int l = 0; l <= count; l++) {
-    for (int c = 0; c < 3; c++) {
-      for (int i = 0; i < 8; i++) {
-        int bit = vals[c] << i & 0x80;
-        rpi_gpio_set(pin);
-        nanospin_ns((bit ? 800 : 400)TRANSFORM);
-        rpi_gpio_clear(pin);
-        nanospin_ns((bit ? 450 : 850)TRANSFORM);
-      }
-    }
-  }
-
-  if (clock_gettime(CLOCK_REALTIME, &stop) == -1) {
-    perror("clock gettime");
-    return;
-  }
-
-  accum = (stop.tv_sec - start.tv_sec) + (double)(stop.tv_nsec - start.tv_nsec);
-  printf("Write took: %lf ns\n", accum);
-}
-
 void *render_lights(void *args) {
   while (1) {
     if (p1.hp_dirty == 1) {
-      shift_out(GPIO_P1_HP, p1.hp);
+      for (int i = 0; i < 5; i++) {
+        if (i < p1.hp) {
+          p1hpstrip.channel[0].leds[i] = 0x00FF0000;
+        } else {
+          p1hpstrip.channel[0].leds[i] = 0x00000000;
+        }
+      }
+
+      /*ws2811_render(&p1hpstrip);*/
       p1.hp_dirty = 0;
     }
 
     if (p2.hp_dirty == 1) {
-      shift_out(GPIO_P2_HP, p2.hp);
-      p2.hp_dirty = 0;
+      for (int i = 0; i < 5; i++) {
+        if (i < p2.hp) {
+          p2hpstrip.channel[0].leds[i] = 0x00FF0000;
+
+        } else {
+          p2hpstrip.channel[0].leds[i] = 0x00000000;
+        }
+      }
+
+      /*ws2811_render(&p2hpstrip);*/
+      p1.hp_dirty = 0;
     }
 
     delay(50);
@@ -322,11 +349,22 @@ int main(void) {
     printf("Failed to get window buffer\n");
   }
 
+#if defined(ENABLE_LED)
+  // setup rgb strip memory area
+  ws2811_init(&p1hpstrip);
+  for (int i = 0; i < 5; i++)
+    p1hpstrip.channel[0].leds[i] = 0x00000000;
+  ws2811_init(&p2hpstrip);
+  for (int i = 0; i < 5; i++)
+    p2hpstrip.channel[0].leds[i] = 0x00000000;
+#endif
+
   setup_gpios();
 
   // init threads
   nanospin_calibrate(1);
 
+#if defined(ENABLE_LED)
   // launch `update` as a high priority thread
   pthread_attr_t attr;
   pthread_attr_init(&attr);
@@ -339,6 +377,7 @@ int main(void) {
   pthread_t thr_update;
   if (pthread_create(&thr_update, &attr, render_lights, NULL) == -1)
     perror("pthread_create"), exit(EXIT_FAILURE);
+#endif
 
   /* Trap execution */
   while (1) {
