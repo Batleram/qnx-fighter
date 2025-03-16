@@ -251,6 +251,63 @@ void setup_gpios() {
   rpi_gpio_set_select(GPIO_P2_2, RPI_GPIO_FUNC_IN);
 }
 
+int is_in_swing_range(Player *attacker, Player *defender) {
+  int distance = 0;
+  // if attacker is on the right of defender
+  if (attacker->x >= defender->x) {
+    int d = attacker->x - defender->x;
+    // avoid negatives if they're in one-another
+    if (d < PLAYER_WIDTH / 2)
+      return 1;
+    distance = d - PLAYER_WIDTH / 2;
+  } else {
+    int d = defender->x - attacker->x;
+    if (d < PLAYER_WIDTH / 2)
+      return 1;
+    distance = d - PLAYER_WIDTH / 2;
+  }
+
+  if (distance < ATTACK_RADIUS)
+    return 1;
+  return 0;
+}
+
+void hitreg_player(Player *attacker, Player *defender) {
+  if (attacker->cooldown_ms != 0)
+    return;
+
+  attacker->hitting = 1;
+  attacker->cooldown_ms = ATTACK_CD;
+  attacker->state = ON_ATTACK_CD;
+
+  if (is_in_swing_range(attacker, defender) == 0) {
+    return;
+  }
+
+  if (defender->state == ON_PARRY_CD) {
+    attacker->state = ON_ATTACK_CD;
+    attacker->cooldown_ms = PARRY_COUNTER_CD;
+    return;
+  }
+
+  if (defender->state == ON_NORMAL_CD) {
+    defender->hp--;
+    defender->hp_dirty = 1;
+    defender->state = ON_HIT_CD;
+    defender->cooldown_ms = HIT_CD;
+    return;
+  }
+
+  if (defender->state == ON_ATTACK_CD) {
+    defender->hp--;
+    defender->hp_dirty = 1;
+    if (defender->cooldown_ms <= HIT_CD)
+      defender->cooldown_ms = HIT_CD;
+    defender->state = ON_HIT_CD;
+    return;
+  }
+}
+
 void handle_inputs() {
   if (rpi_gpio_read(GPIO_P1_L))
     move_player_left(&p1);
@@ -267,16 +324,19 @@ void handle_inputs() {
       p1.state = ON_PARRY_CD;
     }
 
-    p1.hitting = rpi_gpio_read(GPIO_P1_1);
+    if (rpi_gpio_read(GPIO_P1_1) == 1) {
+      hitreg_player(&p1, &p2);
+    }
   }
   if (p2.cooldown_ms == 0) {
     if (rpi_gpio_read(GPIO_P2_2)) {
-            fprintf(stdout, "PARRY!\n");
       p2.cooldown_ms = PARRY_CD;
       p2.state = ON_PARRY_CD;
     }
 
-    p2.hitting = rpi_gpio_read(GPIO_P2_1);
+    if (rpi_gpio_read(GPIO_P2_1) == 1) {
+      hitreg_player(&p2, &p1);
+    }
   }
 }
 
@@ -301,9 +361,12 @@ void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
 
   if (p1.hitting == 1) {
     render_hit_radius(ptr, stride, &p1);
+
+    p1.hitting = 0;
   }
   if (p2.hitting == 1) {
     render_hit_radius(ptr, stride, &p2);
+    p2.hitting = 0;
   }
 
   draw_player(&p1, ptr, stride);
