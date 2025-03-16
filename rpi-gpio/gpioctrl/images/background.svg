@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="840"
+   viewBox="0 0 158.75 222.25"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="background.svg"
+   inkscape:export-filename="/home/elahav/src/qnx/raspberrypi/trunk/utils/gpioctrl/images/background.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="793.70081px"
+     inkscape:zoom="1"
+     inkscape:cx="299.5"
+     inkscape:cy="583.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.202261"
+       id="rect229319"
+       width="158.54773"
+       height="216.75607"
+       x="0.10113059"
+       y="0.10113059"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="122.57968"
+       y="5.4377136"
+       id="text5986-2"><tspan
+         sodipodi:role="line"
+         id="tspan5984-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080;stroke-width:0.264583"
+         x="122.57968"
+         y="5.4377136">Func</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="5.3430371"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="5.3430371"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="15.926371"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="15.926371"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-9"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="26.509703"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-0"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="26.612444"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-8"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="37.093037"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-9"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="37.093037"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-8"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="47.676369"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-8"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="47.676369"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-0"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="58.259705"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-3"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="58.259705"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-9-7"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="68.84304"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-0-0"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="68.84304"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-8-6"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="79.426369"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-9-9"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="79.426369"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-21"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="90.009705"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-7"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="90.009705"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-7"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="100.59304"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-97"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="100.59304"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-9-6"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="111.17636"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-0-2"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="111.17636"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-8-7"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="121.7597"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-9-1"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="121.7597"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-5"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="132.34303"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-88"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="132.34303"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-4"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="142.92638"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-5"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="142.92638"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-9-65"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="153.5097"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-0-6"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="153.5097"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-8-8"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="164.09305"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-9-4"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="164.09305"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-88"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="174.67638"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-3"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="174.67638"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-87"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="185.2597"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-52"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="185.2597"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-9-4"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="195.84305"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-0-5"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="195.84305"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-1-8-0"
+       width="10.480593"
+       height="10.480592"
+       x="68.84304"
+       y="206.42638"
+       ry="1.5596585" />
+    <rect
+       style="fill:#e6e6e6;stroke:#000000;stroke-width:0.102741"
+       id="rect846-4-2-69-1-9-5"
+       width="10.480593"
+       height="10.480592"
+       x="79.426369"
+       y="206.42638"
+       ry="1.5596585" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="72.499367"
+       y="13.084529"
+       id="text6518"><tspan
+         sodipodi:role="line"
+         id="tspan6516"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="72.499367"
+         y="13.084529">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="72.185394"
+       y="23.586723"
+       id="text6518-1"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="72.185394"
+         y="23.586723">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="82.733444"
+       y="23.667862"
+       id="text6518-3"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="82.733444"
+         y="23.667862">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="72.150116"
+       y="34.170055"
+       id="text6518-0"><tspan
+         sodipodi:role="line"
+         id="tspan6516-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="72.150116"
+         y="34.170055">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="72.086617"
+       y="44.83453"
+       id="text6518-1-0"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="72.086617"
+         y="44.83453">7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="82.705223"
+       y="34.170055"
+       id="text6518-2-4"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="82.705223"
+         y="34.170055">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="82.726387"
+       y="44.753391"
+       id="text6518-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="82.726387"
+         y="44.753391">8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="72.153641"
+       y="55.336723"
+       id="text6518-5"><tspan
+         sodipodi:role="line"
+         id="tspan6516-24"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="72.153641"
+         y="55.336723">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.537918"
+       y="66.001198"
+       id="text6518-1-3"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.537918"
+         y="66.001198">11</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.556801"
+       y="55.336723"
+       id="text6518-2-0"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.556801"
+         y="55.336723">10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.542694"
+       y="66.001198"
+       id="text6518-3-2"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.542694"
+         y="66.001198">12</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="69.977005"
+       y="76.503387"
+       id="text6518-0-1"><tspan
+         sodipodi:role="line"
+         id="tspan6516-3-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="69.977005"
+         y="76.503387">13</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="69.952309"
+       y="87.086723"
+       id="text6518-1-0-4"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-0-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="69.952309"
+         y="87.086723">15</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.510941"
+       y="76.584526"
+       id="text6518-2-4-4"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-9-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.510941"
+         y="76.584526">14</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.535637"
+       y="87.086723"
+       id="text6518-3-7-7"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-4-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.535637"
+         y="87.086723">16</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="69.927612"
+       y="97.751198"
+       id="text6518-16"><tspan
+         sodipodi:role="line"
+         id="tspan6516-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="69.927612"
+         y="97.751198">17</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="69.966415"
+       y="108.2534"
+       id="text6518-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="69.966415"
+         y="108.2534">19</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.535637"
+       y="97.670059"
+       id="text6518-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-98"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.535637"
+         y="97.670059">18</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.796692"
+       y="108.2534"
+       id="text6518-3-70"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-48"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.796692"
+         y="108.2534">20</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.777809"
+       y="118.91785"
+       id="text6518-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan6516-3-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.777809"
+         y="118.91785">21</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.216888"
+       y="129.42007"
+       id="text6518-1-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-0-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.216888"
+         y="129.42007">23</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.782578"
+       y="118.91785"
+       id="text6518-2-4-9"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-9-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.782578"
+         y="118.91785">22</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.750832"
+       y="129.50121"
+       id="text6518-3-7-0"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-4-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.750832"
+         y="129.50121">24</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.1922"
+       y="140.00339"
+       id="text6518-9"><tspan
+         sodipodi:role="line"
+         id="tspan6516-08"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.1922"
+         y="140.00339">25</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.167503"
+       y="150.66786"
+       id="text6518-1-31"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.167503"
+         y="150.66786">27</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.775528"
+       y="140.00339"
+       id="text6518-2-9"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.775528"
+         y="140.00339">26</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.775528"
+       y="150.58673"
+       id="text6518-3-73"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.775528"
+         y="150.58673">28</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.206306"
+       y="161.17006"
+       id="text6518-0-2"><tspan
+         sodipodi:role="line"
+         id="tspan6516-3-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.206306"
+         y="161.17006">29</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.784866"
+       y="171.7534"
+       id="text6518-1-0-5"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-0-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.784866"
+         y="171.7534">31</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.803749"
+       y="161.17006"
+       id="text6518-2-4-0"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-9-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.803749"
+         y="161.17006">30</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.789635"
+       y="171.7534"
+       id="text6518-3-7-1"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-4-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.789635"
+         y="171.7534">32</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.223946"
+       y="182.33673"
+       id="text6518-11"><tspan
+         sodipodi:role="line"
+         id="tspan6516-30"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.223946"
+         y="182.33673">33</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.199249"
+       y="192.92006"
+       id="text6518-1-2"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.199249"
+         y="192.92006">35</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.757889"
+       y="182.33673"
+       id="text6518-2-5"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-65"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.757889"
+         y="182.33673">34</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.782578"
+       y="192.92006"
+       id="text6518-3-22"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.782578"
+         y="192.92006">36</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.174561"
+       y="203.5034"
+       id="text6518-0-24"><tspan
+         sodipodi:role="line"
+         id="tspan6516-3-16"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.174561"
+         y="203.5034">37</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="70.213364"
+       y="214.08673"
+       id="text6518-1-0-7"><tspan
+         sodipodi:role="line"
+         id="tspan6516-0-0-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="70.213364"
+         y="214.08673">39</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.782578"
+       y="203.5034"
+       id="text6518-2-4-92"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7-9-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.782578"
+         y="203.5034">38</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="80.817856"
+       y="214.08673"
+       id="text6518-3-7-6"><tspan
+         sodipodi:role="line"
+         id="tspan6516-2-4-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="80.817856"
+         y="214.08673">40</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="82.744026"
+       y="13.084529"
+       id="text6518-2"><tspan
+         sodipodi:role="line"
+         id="tspan6516-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="82.744026"
+         y="13.084529">2</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:0.239514"
+       id="rect90369"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="6.6145835"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="47.370293"
+       y="12.326761"
+       id="text94999"><tspan
+         sodipodi:role="line"
+         id="tspan94997"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="47.370293"
+         y="12.326761">3.3V</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:0.239514"
+       id="rect90369-7"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="91.28125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="47.370293"
+       y="96.993423"
+       id="text94999-4"><tspan
+         sodipodi:role="line"
+         id="tspan94997-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="47.370293"
+         y="96.993423">3.3V</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="6.6145835"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="102.34895"
+       y="12.326761"
+       id="text106965"><tspan
+         sodipodi:role="line"
+         id="tspan106963"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="102.34895"
+         y="12.326761">5V</tspan></text>
+    <rect
+       style="fill:#ff0000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="17.197916"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="102.34896"
+       y="22.910093"
+       id="text106965-2"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="102.34896"
+         y="22.910093">5V</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="27.78125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="99.988167"
+       y="33.52306"
+       id="text106965-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="99.988167"
+         y="33.52306">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-3"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="48.947918"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="47.071491"
+       y="54.689728"
+       id="text106965-2-7-5"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="47.071491"
+         y="54.689728">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-1"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="70.114578"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="99.988174"
+       y="75.856384"
+       id="text106965-2-7-4"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-0"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="99.988174"
+         y="75.856384">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-31"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="133.61459"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="47.071499"
+       y="139.3564"
+       id="text106965-2-7-2"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="47.071499"
+         y="139.3564">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-7"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="101.86458"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="99.988167"
+       y="107.60638"
+       id="text106965-2-7-9"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="99.988167"
+         y="107.60638">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-10"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="154.78125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="99.988159"
+       y="160.52306"
+       id="text106965-2-7-25"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="99.988159"
+         y="160.52306">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-9"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="175.94792"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="99.988167"
+       y="181.68973"
+       id="text106965-2-7-7"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-13"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="99.988167"
+         y="181.68973">GND</tspan></text>
+    <rect
+       style="fill:#000000;stroke:none;stroke-width:0.239514"
+       id="rect90369-2-0-9-12"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="207.69792"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+       x="47.071499"
+       y="213.43973"
+       id="text106965-2-7-0"><tspan
+         sodipodi:role="line"
+         id="tspan106963-2-4-68"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="47.071499"
+         y="213.43973">GND</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="17.197916"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="45.011974"
+       y="22.939728"
+       id="text94999-45"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="45.011974"
+         y="22.939728">GPIO2</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="70.114578"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.513023"
+       y="75.856392"
+       id="text94999-45-8"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.513023"
+         y="75.856392">GPIO27</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-6"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="27.78125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="45.063835"
+       y="33.523064"
+       id="text94999-45-0"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="45.063835"
+         y="33.523064">GPIO3</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="38.364586"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="45.12804"
+       y="44.106396"
+       id="text94999-45-09"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="45.12804"
+         y="44.106396">GPIO4</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-5"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="38.364586"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.6717"
+       y="44.106392"
+       id="text94999-45-09-4"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.6717"
+         y="44.106392">GPIO14</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-6"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="48.947918"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.533409"
+       y="54.689728"
+       id="text94999-45-09-3"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.533409"
+         y="54.689728">GPIO15</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-9"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="59.53125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.577858"
+       y="65.273056"
+       id="text94999-45-09-5"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.577858"
+         y="65.273056">GPIO18</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-1"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="59.53125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.513023"
+       y="65.273064"
+       id="text94999-45-8-3"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-0"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.513023"
+         y="65.273064">GPIO17</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-9"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="80.697914"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.638966"
+       y="86.439728"
+       id="text94999-45-8-9"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.638966"
+         y="86.439728">GPIO22</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-3"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="80.697914"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.607491"
+       y="86.439728"
+       id="text94999-45-8-4"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-5"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.607491"
+         y="86.439728">GPIO23</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-9-8"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="91.28125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.6717"
+       y="97.023064"
+       id="text94999-45-8-9-5"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-1-7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.6717"
+         y="97.023064">GPIO24</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-33"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="112.44791"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.533409"
+       y="118.18973"
+       id="text94999-45-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.533409"
+         y="118.18973">GPIO25</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-9-5"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="123.03126"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="97.968155"
+       y="128.77307"
+       id="text94999-45-8-9-53"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-1-8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="97.968155"
+         y="128.77307">GPIO8</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-8"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="133.61459"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="97.802704"
+       y="139.3564"
+       id="text94999-45-8-7"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-05"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="97.802704"
+         y="139.3564">GPIO7</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-2-9-1"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="144.19792"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="98.229919"
+       y="149.93974"
+       id="text94999-45-8-9-1"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-9-1-0"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="98.229919"
+         y="149.93974">GPIO1</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-5-3"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="165.36459"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.555634"
+       y="171.1064"
+       id="text94999-45-09-4-0"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-6-0"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.555634"
+         y="171.1064">GPIO12</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-5-4"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="186.53125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.577858"
+       y="192.27306"
+       id="text94999-45-09-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-6-4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.577858"
+         y="192.27306">GPIO16</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-6-2"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="197.11458"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.609962"
+       y="202.85638"
+       id="text94999-45-09-3-4"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-9-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.609962"
+         y="202.85638">GPIO20</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-9-9"
+       width="21.166666"
+       height="7.9375"
+       x="95.25"
+       y="207.69791"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="96.856903"
+       y="213.43973"
+       id="text94999-45-09-5-9"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-2-4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="96.856903"
+         y="213.43973">GPIO21</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-5-9"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="144.19792"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="45.066303"
+       y="149.93973"
+       id="text94999-45-09-4-8"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-6-1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="45.066303"
+         y="149.93973">GPIO0</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-6-6"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="154.78127"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="44.98975"
+       y="160.52307"
+       id="text94999-45-09-3-3"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-9-93"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="44.98975"
+         y="160.52307">GPIO5</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-9-3"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="165.36459"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="45.034203"
+       y="171.1064"
+       id="text94999-45-09-5-4"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-2-6"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="45.034203"
+         y="171.1064">GPIO6</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-5-1"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="175.94792"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.690823"
+       y="181.68973"
+       id="text94999-45-09-4-56"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-6-17"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.690823"
+         y="181.68973">GPIO13</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-6-22"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="186.53125"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.690823"
+       y="192.27306"
+       id="text94999-45-09-3-9"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-9-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.690823"
+         y="192.27306">GPIO19</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-9-8"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="197.11458"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.66119"
+       y="202.8564"
+       id="text94999-45-09-5-1"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-2-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.66119"
+         y="202.8564">GPIO26</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-5-9-4"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="101.86458"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.693295"
+       y="107.60638"
+       id="text94999-45-09-4-8-7"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-6-1-8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.693295"
+         y="107.60638">GPIO10</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-6-6-6"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="112.44792"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="45.063835"
+       y="118.18973"
+       id="text94999-45-09-3-3-3"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-9-93-7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="45.063835"
+         y="118.18973">GPIO9</tspan></text>
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:0.239514"
+       id="rect90369-24-4-9-3-7"
+       width="21.166666"
+       height="7.9375"
+       x="42.333332"
+       y="123.03126"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+       x="43.940239"
+       y="128.77306"
+       id="text94999-45-09-5-4-2"><tspan
+         sodipodi:role="line"
+         id="tspan94997-91-4-2-6-3"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke:#ffffff;stroke-width:0.264583"
+         x="43.940239"
+         y="128.77306">GPIO11</tspan></text>
+    <rect
+       style="fill:#cccccc;fill-opacity:1;stroke:#4d4d4d;stroke-width:0.198391"
+       id="rect1434"
+       width="158.55161"
+       height="5.0932751"
+       x="0.099195912"
+       y="217.05753" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="0.87136143"
+       y="5.4377136"
+       id="text5986"><tspan
+         sodipodi:role="line"
+         id="tspan5984"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080;stroke-width:0.264583"
+         x="0.87136143"
+         y="5.4377136">Func</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="22.404917"
+       y="5.4377136"
+       id="text5986-3"><tspan
+         sodipodi:role="line"
+         id="tspan5984-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080;stroke-width:0.264583"
+         x="22.404917"
+         y="5.4377136">Value</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="144.11325"
+       y="5.4377136"
+       id="text5986-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan5984-7-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080;stroke-width:0.264583"
+         x="144.11325"
+         y="5.4377136">Value</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif, Normal';stroke-width:0.264583"
+       x="24.775366"
+       y="220.57741"
+       id="text3888"><tspan
+         sodipodi:role="line"
+         id="tspan3886"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="24.775366"
+         y="220.57741">Func: toggle input/output Value: toggle high/low (output only)</tspan></text>
+  </g>
+</svg>
