@@ -1,4 +1,5 @@
-# qnx-fighter
+<h1 align="center">QNX FIGHTER</h1>
+<p align="center">Street Fighter, but on QNX.</p>
 
 # About
 This project is the result of many failed attempts at getting rendering working on the QNX everywhere image  
