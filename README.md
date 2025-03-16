@@ -7,7 +7,7 @@
 We were mainly inspired by classic Street Fighter and retro NES-style games. There's just something about them that is so nostalgic and fun.
 
 ### What it does:
-Runs a Street Fighter-inspired game we made, now on QNX. See [Build](#build) for setup.
+Runs a Street Fighter-inspired game we made, now on QNX. See `Building` section for setup.
 
 ### How we built it:
 This project is the result of many failed attempts at getting rendering working on the QNX everywhere image.
