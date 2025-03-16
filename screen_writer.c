@@ -17,6 +17,9 @@
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
 
+#define HP_SQUARE_SIZE 50
+#define HP_GAP_SIZE 10
+
 #define GPIO_P1_L 26
 #define GPIO_P1_R 17
 #define GPIO_P1_1 22
@@ -32,7 +35,7 @@
 #define ATTACK_RADIUS (PLAYER_HEIGHT + 100) / 2
 
 #define PLAYER_HEIGHT 240
-#define MAX_HP 3
+#define MAX_HP 5
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
 
@@ -51,6 +54,7 @@
 #define ATTACK_COLOR 0xFF00FFFF
 #define HIT_COLOR 0xFFFF0000
 #define PARRY_COLOR 0xFF0000FF
+#define HP_COLOR 0xFFFF0000
 
 #define GAME_CLOCK_DELAY 15
 
@@ -109,13 +113,13 @@ typedef struct {
   int cooldown_ms;
 } Player;
 
-Player p1 = {.x = 200,
+Player p1 = {.x = WINDOW_WIDTH / 4 - PLAYER_WIDTH / 2,
              .hitting = 0,
              .hp = MAX_HP,
              .hp_dirty = 1,
              .state = ON_NORMAL_CD,
              .cooldown_ms = 0};
-Player p2 = {.x = 400,
+Player p2 = {.x = 3 * WINDOW_WIDTH / 4 - PLAYER_WIDTH / 2,
              .hitting = 0,
              .hp = MAX_HP,
              .hp_dirty = 1,
@@ -340,6 +344,62 @@ void handle_inputs() {
   }
 }
 
+void render_hp_bars(int *buffer, int stride) {
+  int *lbuffer = buffer;
+
+  for (int i = 0; i < HP_SQUARE_SIZE; ++i, lbuffer += (stride / 4)) {
+    // render p1 hp from left to right
+    int gap = 1;
+    int cum = 0;
+    int p1hp = p1.hp;
+    for (int j = 0; j < WINDOW_WIDTH / 2; j++) {
+      if (p1hp == 0)
+        continue;
+      cum += 1;
+
+      if (gap == 1) {
+        if (cum == HP_GAP_SIZE) {
+          gap = 0;
+          cum = 0;
+        }
+        continue;
+      }
+
+      if (cum == HP_SQUARE_SIZE) {
+        gap = 1;
+        p1hp -= 1;
+        cum = 0;
+      }
+      lbuffer[j] = HP_COLOR;
+    }
+
+    // render p2 hp from left to right
+    gap = 1;
+    cum = 0;
+    int p2hp = p2.hp;
+    for (int j = WINDOW_WIDTH; j >= WINDOW_WIDTH / 2; j--) {
+      if (p2hp == 0)
+        continue;
+      cum += 1;
+
+      if (gap == 1) {
+        if (cum == HP_GAP_SIZE) {
+          gap = 0;
+          cum = 0;
+        }
+        continue;
+      }
+
+      if (cum == HP_SQUARE_SIZE) {
+        gap = 1;
+        p2hp -= 1;
+        cum = 0;
+      }
+      lbuffer[j] = HP_COLOR;
+    }
+  }
+}
+
 void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
   int *ptr = NULL;
   int err = screen_get_buffer_property_pv(*screen_buf, SCREEN_PROPERTY_POINTER,
@@ -371,6 +431,8 @@ void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
 
   draw_player(&p1, ptr, stride);
   draw_player(&p2, ptr, stride);
+
+  render_hp_bars(ptr, stride);
 
   err = screen_post_window(*screen_window, *screen_buf, 0, NULL, 0);
   if (err != 0) {
