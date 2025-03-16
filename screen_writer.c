@@ -113,18 +113,24 @@ typedef struct {
   int cooldown_ms;
 } Player;
 
-Player p1 = {.x = WINDOW_WIDTH / 4 - PLAYER_WIDTH / 2,
-             .hitting = 0,
-             .hp = MAX_HP,
-             .hp_dirty = 1,
-             .state = ON_NORMAL_CD,
-             .cooldown_ms = 0};
-Player p2 = {.x = 3 * WINDOW_WIDTH / 4 - PLAYER_WIDTH / 2,
-             .hitting = 0,
-             .hp = MAX_HP,
-             .hp_dirty = 1,
-             .state = ON_NORMAL_CD,
-             .cooldown_ms = 0};
+Player p1;
+Player p2;
+
+void start_game() {
+  p1.x = WINDOW_WIDTH / 4 - PLAYER_WIDTH / 2;
+  p1.hitting = 0;
+  p1.hp = MAX_HP;
+  p1.hp_dirty = 1;
+  p1.state = ON_NORMAL_CD;
+  p1.cooldown_ms = 0;
+
+  p2.x = 3 * WINDOW_WIDTH / 4 - PLAYER_WIDTH / 2;
+  p2.hitting = 0;
+  p2.hp = MAX_HP;
+  p2.hp_dirty = 1;
+  p2.state = ON_NORMAL_CD;
+  p2.cooldown_ms = 0;
+}
 
 void draw_player(Player *p, int *buffer, int stride) {
   int color = 0x00;
@@ -296,6 +302,9 @@ void hitreg_player(Player *attacker, Player *defender) {
 
   if (defender->state == ON_NORMAL_CD) {
     defender->hp--;
+    if (defender->hp == 0) // dirty restart, might lose some input data but it
+                           // doens't really matter
+      return start_game();
     defender->hp_dirty = 1;
     defender->state = ON_HIT_CD;
     defender->cooldown_ms = HIT_CD;
@@ -304,6 +313,9 @@ void hitreg_player(Player *attacker, Player *defender) {
 
   if (defender->state == ON_ATTACK_CD) {
     defender->hp--;
+    if (defender->hp == 0) // dirty restart, might lose some input data but it
+                           // doens't really matter
+      return start_game();
     defender->hp_dirty = 1;
     if (defender->cooldown_ms <= HIT_CD)
       defender->cooldown_ms = HIT_CD;
@@ -541,6 +553,8 @@ int main(void) {
   if (err != 0) {
     printf("Failed to get window buffer\n");
   }
+
+  start_game();
 
 #if defined(ENABLE_LED)
   // setup rgb strip memory area
