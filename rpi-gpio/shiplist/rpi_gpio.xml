@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiplist>
+    <id>com.qnx.${baselineId}.osr.rpi_gpio</id>
+    <version>1.0.0</version>
+    <name>RaspberryPi GPIO</name>
+    <category>OSR</category>
+    <property key="product">Prebuilt Open Source Packages</property>
+    <packageType>addon</packageType>
+    <description>GPIO server and Python modules for RaspberryPi</description>
+    <asset dest="${targetfolder}/[ARCH:aarch64le]/sbin/rpi_gpio"/>
+    <asset dest="${targetfolder}/[ARCH:aarch64le]/usr/lib/python3.11/rpi_gpio.so"/>
+    <asset dest="${targetfolder}/[ARCH:aarch64le]/usr/lib/python3.11/smbus.so"/>
+    <asset dest="${targetfolder}/[ARCH:aarch64le]/bin/gpioctrl"/>
+    <asset dest="${targetfolder}/usr/share/gpioctrl/images"/>
+</shiplist>

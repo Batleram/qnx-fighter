@@ -1,7 +1,8 @@
 .DS_Store
+writer
+__pycache__
 .vscode/*
 .venv
-__pycache__
 game
 example
 *.o

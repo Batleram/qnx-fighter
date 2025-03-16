@@ -1,0 +1,39 @@
+%C     - GPIO resource manager for Raspberry Pi 3
+
+%C [-m PATH] [-p PRIO] [-s SHMEM_PATH] [-u UID] [-v]
+
+Options:
+ -m    Mount under PATH instead of /dev/gpio
+ -p    Interrupt service thread priority
+ -s    Path for a shared-memory object holding the GPIO physical block
+ -u    Switch to user ID UID after starting
+ -v    Be verbose
+
+Examples:
+
+Once running, the resource manager exposed a node for every GPIO under
+its mount point. These can be written to and read from.
+The following commands program GPIO 17 as an output and turn the PIN on:
+
+# echo -n out > /dev/gpio/17
+# echo -n on > /dev/gpio/17
+
+The following commands program GPIO 18 as an input and read its value
+# echo -n in > /dev/gpio/18
+# cat /dev/gpio/18
+0#
+
+To programatically interact with the resource manager, it is better to
+open the 'msg' node under the mount point and use rpi_gpio_msg_t messages.
+The following code programs GPIO 17 as an output:
+
+    int fd = open("/dev/gpio/msg", O_RDWR);
+
+    rpi_gpio_msg_t  msg = {
+        .hdr.type = _IO_MSG,
+        .hdr.subtype = RPI_GPIO_SET_SELECT,
+        .gpio = 17,
+        .value = 1
+    };
+
+    int rc = MsgSend(fd, &msg, sizeof(msg), &msg, sizeof(msg));
