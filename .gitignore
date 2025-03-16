@@ -1,2 +1,6 @@
-
+.DS_Store
 writer
+.vscode
+example
+.venv
+__pycache__
