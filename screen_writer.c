@@ -1,41 +1,47 @@
+#include <aarch64/rpi_gpio.h>
+#include <math.h>
+#include <pthread.h>
+#include <screen/screen.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 #include <string.h>
-#include <time.h>
-#include <unistd.h>
-#include <pthread.h>
 #include <sys/mman.h>
 #include <sys/neutrino.h>
-#include <aarch64/rpi_gpio.h>
-#include <screen/screen.h>
+#include <time.h>
+#include <unistd.h>
 
 #define PLAYER_WIDTH 80
 #define PLAYER_HEIGHT 240
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
 
+#define CIRCLE_COLOR 0xFFFF0000
+
 #define GPIO_P1_L 26
 #define GPIO_P1_R 17
-#define GPIO_P1_1 27
-#define GPIO_P1_2 22
+#define GPIO_P1_1 22
+#define GPIO_P1_2 27
 #define GPIO_P2_L 18
 #define GPIO_P2_R 25
 #define GPIO_P2_1 5
 #define GPIO_P2_2 6
 
 #define MOVEMENT_SPEED 5
+#define ATTACK_RADIUS ( PLAYER_HEIGHT + 100 ) / 2
+
 #define PLAYER_HEIGHT 240
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
 
 typedef struct {
   int x;
+  int hitting;
 } Player;
 
-Player p1 = {.x = 200};
+Player p1 = {.x = 200, .hitting = 0};
 
-Player p2 = {.x = 400};
+Player p2 = {.x = 400, .hitting = 0};
 
 void draw_player(Player *p, int *buffer, int stride) {
   int *lbuffer = buffer;
@@ -46,6 +52,52 @@ void draw_player(Player *p, int *buffer, int stride) {
       lbuffer[j] = 0xFFFFFFFF;
     }
   }
+}
+
+int point_distance_squared(int x1, int y1, int x2, int y2) {
+  int dx;
+  int dy;
+  if (x1 > x2) {
+    dx = x1 - x2;
+  } else {
+    dx = x2 - x1;
+  }
+
+  if (y1 > y2) {
+    dy = y1 - y2;
+  } else {
+    dy = y2 - y1;
+  }
+
+  return dx * dx + dy * dy;
+}
+
+int in_range(int a, int b, int range) {
+  if (a >= b && a - b <= range)
+    return 1;
+  if (a <= b && b - a <= range)
+    return 1;
+  return 0;
+}
+
+void draw_circle(int *buffer, int stride, int radius, int x, int y) {
+  int radius_error = 200;
+  int *lbuffer = buffer;
+  int rr = radius * radius;
+  for (int i = 0; i < WINDOW_HEIGHT; ++i, lbuffer += (stride / 4)) {
+    for (int j = 0; j < WINDOW_WIDTH; j++) {
+      if (in_range(point_distance_squared(x, y, j, i), rr, radius_error) == 1) {
+        lbuffer[j] = CIRCLE_COLOR;
+      }
+    }
+  }
+}
+
+void render_hit_radius(int *buffer, int stride, Player *p) {
+  int y = WINDOW_HEIGHT - (PLAYER_HEIGHT / 2);
+  int x = p->x + PLAYER_WIDTH / 2;
+
+  draw_circle(buffer, stride, ATTACK_RADIUS, x, y);
 }
 
 void clear_screen(int *buffer, int stride) {
@@ -92,16 +144,24 @@ void setup_gpios() {
 
   rpi_gpio_set_select(GPIO_P1_L, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P1_R, RPI_GPIO_FUNC_IN);
+  rpi_gpio_set_select(GPIO_P1_1, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_L, RPI_GPIO_FUNC_IN);
   rpi_gpio_set_select(GPIO_P2_R, RPI_GPIO_FUNC_IN);
+  rpi_gpio_set_select(GPIO_P2_1, RPI_GPIO_FUNC_IN);
 }
 
 void handle_inputs() {
-    fprintf(stdout, "%d\n",rpi_gpio_read(GPIO_P1_L) );
-    if (rpi_gpio_read(GPIO_P1_L)) move_player_left(&p1);
-    if (rpi_gpio_read(GPIO_P1_R)) move_player_right(&p1);
-    if (rpi_gpio_read(GPIO_P2_L)) move_player_left(&p2);
-    if (rpi_gpio_read(GPIO_P2_R)) move_player_right(&p2);
+  if (rpi_gpio_read(GPIO_P1_L))
+    move_player_left(&p1);
+  if (rpi_gpio_read(GPIO_P1_R))
+    move_player_right(&p1);
+  if (rpi_gpio_read(GPIO_P2_L))
+    move_player_left(&p2);
+  if (rpi_gpio_read(GPIO_P2_R))
+    move_player_right(&p2);
+
+  p1.hitting = rpi_gpio_read(GPIO_P1_1);
+  p2.hitting = rpi_gpio_read(GPIO_P2_1);
 }
 
 void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
@@ -122,6 +182,14 @@ void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
   // clear screen
   memset(ptr, 0x00, WINDOW_HEIGHT * WINDOW_WIDTH * 4);
   clear_screen(ptr, stride);
+
+  if (p1.hitting == 1) {
+    render_hit_radius(ptr, stride, &p1);
+  }
+  if (p2.hitting == 1) {
+    render_hit_radius(ptr, stride, &p2);
+  }
+
   draw_player(&p1, ptr, stride);
   draw_player(&p2, ptr, stride);
 
@@ -189,7 +257,7 @@ int main(void) {
     printf("Failed to get window buffer\n");
   }
 
-    setup_gpios();
+  setup_gpios();
 
   /* Trap execution */
   while (1) {
