@@ -17,9 +17,6 @@
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
 
-#define CIRCLE_COLOR 0xFFFF0000
-#define HIT_COLOR CIRCLE_COLOR
-
 #define GPIO_P1_L 26
 #define GPIO_P1_R 17
 #define GPIO_P1_1 22
@@ -38,6 +35,24 @@
 #define MAX_HP 3
 #define WINDOW_HEIGHT 480
 #define WINDOW_WIDTH 800
+
+#define ATTACK_CD 800
+#define HIT_CD 500
+#define PARRY_CD 250
+#define PARRY_COUNTER_CD 1000
+
+#define ON_NORMAL_CD 1
+#define ON_ATTACK_CD 2
+#define ON_HIT_CD 3
+#define ON_PARRY_CD 4
+
+#define CIRCLE_COLOR 0xFFFF0000
+#define NORMAL_COLOR 0xFFFFFFFF
+#define ATTACK_COLOR 0xFF00FFFF
+#define HIT_COLOR 0xFFFF0000
+#define PARRY_COLOR 0xFF0000FF
+
+#define GAME_CLOCK_DELAY 15
 
 ws2811_t p1hpstrip = {
     .freq = WS2811_TARGET_FREQ,
@@ -90,18 +105,50 @@ typedef struct {
   int hitting;
   int hp;
   int hp_dirty;
+  int state;
+  int cooldown_ms;
 } Player;
 
-Player p1 = {.x = 200, .hitting = 0, .hp = MAX_HP, .hp_dirty = 1};
-Player p2 = {.x = 400, .hitting = 0, .hp = MAX_HP, .hp_dirty = 1};
+Player p1 = {.x = 200,
+             .hitting = 0,
+             .hp = MAX_HP,
+             .hp_dirty = 1,
+             .state = ON_NORMAL_CD,
+             .cooldown_ms = 0};
+Player p2 = {.x = 400,
+             .hitting = 0,
+             .hp = MAX_HP,
+             .hp_dirty = 1,
+             .state = ON_NORMAL_CD,
+             .cooldown_ms = 0};
 
 void draw_player(Player *p, int *buffer, int stride) {
+  int color = 0x00;
+  switch (p->state) {
+  case ON_NORMAL_CD: {
+    color = NORMAL_COLOR;
+    break;
+  }
+  case ON_PARRY_CD: {
+    color = PARRY_COLOR;
+    break;
+  }
+  case ON_ATTACK_CD: {
+    color = ATTACK_COLOR;
+    break;
+  }
+  case ON_HIT_CD: {
+    color = HIT_COLOR;
+    break;
+  }
+  }
+
   int *lbuffer = buffer;
   int player_head = PLAYER_HEIGHT;
   lbuffer += (stride / 4) * (WINDOW_HEIGHT - player_head);
   for (int i = player_head; i > 0; i--, lbuffer += (stride / 4)) {
     for (int j = p->x; j < p->x + PLAYER_WIDTH; j++) {
-      lbuffer[j] = 0xFFFFFFFF;
+      lbuffer[j] = color;
     }
   }
 }
@@ -214,13 +261,23 @@ void handle_inputs() {
   if (rpi_gpio_read(GPIO_P2_R))
     move_player_right(&p2);
 
-  if (rpi_gpio_read(GPIO_P1_2))
-    p1.hp_dirty = 1;
-  if (rpi_gpio_read(GPIO_P2_2))
-    p2.hp_dirty = 1;
+  if (p1.cooldown_ms == 0) {
+    if (rpi_gpio_read(GPIO_P1_2)) {
+      p1.cooldown_ms = PARRY_CD;
+      p1.state = ON_PARRY_CD;
+    }
 
-  p1.hitting = rpi_gpio_read(GPIO_P1_1);
-  p2.hitting = rpi_gpio_read(GPIO_P2_1);
+    p1.hitting = rpi_gpio_read(GPIO_P1_1);
+  }
+  if (p2.cooldown_ms == 0) {
+    if (rpi_gpio_read(GPIO_P2_2)) {
+            fprintf(stdout, "PARRY!\n");
+      p2.cooldown_ms = PARRY_CD;
+      p2.state = ON_PARRY_CD;
+    }
+
+    p2.hitting = rpi_gpio_read(GPIO_P2_1);
+  }
 }
 
 void render(screen_buffer_t *screen_buf, screen_window_t *screen_window) {
@@ -288,6 +345,17 @@ void *render_lights(void *args) {
     }
 
     delay(50);
+  }
+}
+
+void tick(Player *p) {
+  // for all intents and purposes, the game renders instantly, this will make it
+  // much easier
+  if (p->cooldown_ms <= GAME_CLOCK_DELAY) {
+    p->cooldown_ms = 0;
+    p->state = ON_NORMAL_CD;
+  } else {
+    p->cooldown_ms -= GAME_CLOCK_DELAY;
   }
 }
 
@@ -381,9 +449,11 @@ int main(void) {
 
   /* Trap execution */
   while (1) {
+    tick(&p1);
+    tick(&p2);
     render(&screen_buf, &screen_window);
     handle_inputs();
-    delay(15);
+    delay(GAME_CLOCK_DELAY);
   }
 
   screen_destroy_window(screen_window);
